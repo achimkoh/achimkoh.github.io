@@ -6,7 +6,7 @@ $(function () {
   var appWidth = 24;
   var appHeight = 24;
   var flashvars = {'upload_image': 'http://michalstocki.github.io/FlashWavRecorder/html/images/upload.png'};
-  var params = { allowScriptAccess: 'always' };
+  var params = { allowScriptAccess: 'always', wmode: 'transparent'};
   var attributes = {'id': RECORDER_APP_ID, 'name': RECORDER_APP_ID};
   swfobject.embedSWF("../files/2016/06/recorder.jpg", "flashcontent", appWidth, appHeight, "11.0.0", "", flashvars, params, attributes);
 
