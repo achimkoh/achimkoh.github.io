@@ -77,7 +77,7 @@ window.onscroll=function(){
         if(pageYOffset>vid.offsetTop){
             navmobile.style.display='inherit';
         }else{
-            navmobile.style.display='none !important';
+            navmobile.style.display='none';
         }
     }
 
