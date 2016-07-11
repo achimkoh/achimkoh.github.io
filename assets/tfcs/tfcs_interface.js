@@ -23,55 +23,66 @@ var startProductBarPos=-1;
 
 window.onscroll=function(){
     if(window.innerWidth > 960) {
+        var nav = document.getElementById('video-navigation');
+        var con = document.getElementById('video-frame');
+        var gotovideo = document.getElementById('gotovideo');
+        var phonemesO = document.getElementById('gotophonemes-original');
+        var phonemes = document.getElementById('gotophonemes');
+        var recbuttons = document.getElementsByClassName('recorder');
+        var navtop;
+        var contop;
+        if(window.innerWidth > 1242){
+            navtop = '75px';
+            contop = '125px';
+        }else{
+            navtop = 0;
+            contop = '75px';
+        }
 
-    var nav = document.getElementById('video-navigation');
-    var con = document.getElementById('video-frame');
-    var gotovideo = document.getElementById('gotovideo');
-    var phonemesO = document.getElementById('gotophonemes-original');
-    var phonemes = document.getElementById('gotophonemes');
-    var recbuttons = document.getElementsByClassName('recorder');
-    var navtop;
-    var contop;
-    if(window.innerWidth > 1242){
-        navtop = '75px';
-        contop = '125px';
+        if(startProductBarPos<0)startProductBarPos=findPosY(nav);
+        if(pageYOffset>startProductBarPos){
+            nav.style.position='fixed';
+            nav.style.top=navtop;
+            nav.style.display='flex';
+            nav.style.width='100%';
+            nav.style.height='2em';
+            nav.style.lineHeight='1em';
+            gotovideo.style.display='inherit';
+            phonemes.style.display='inherit';
+            phonemesO.style.display='none';
+            con.style.position='fixed';
+            con.style.top=contop;
+            con.style.right='50px';
+            con.style.width='10%';
+            for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
+        }else{
+            nav.style.position='relative';
+            nav.style.top=0;
+            nav.style.display='inline-block';
+            nav.style.width='30%';
+            nav.style.height='inherit';
+            nav.style.lineHeight='inherit';
+            gotovideo.style.display='none';
+            phonemes.style.display='none';
+            phonemesO.style.display='inherit';
+            con.style.position='relative';
+            con.style.top=0;
+            con.style.right=0;
+            con.style.width='70%';
+            for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
+        }
     }else{
-        navtop = 0;
-        contop = '75px';
-    }
-
-    if(startProductBarPos<0)startProductBarPos=findPosY(nav);
-    if(pageYOffset>startProductBarPos){
-        nav.style.position='fixed';
-        nav.style.top=navtop;
-        nav.style.display='flex';
-        nav.style.width='100%';
-        nav.style.height='2em';
-        nav.style.lineHeight='1em';
-        gotovideo.style.display='inherit';
-        phonemes.style.display='inherit';
-        phonemesO.style.display='none';
-        con.style.position='fixed';
-        con.style.top=contop;
-        con.style.right='50px';
-        con.style.width='10%';
-        for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
-    }else{
-        nav.style.position='relative';
-        nav.style.top=0;
-        nav.style.display='inline-block';
-        nav.style.width='30%';
-        nav.style.height='inherit';
-        nav.style.lineHeight='inherit';
-        gotovideo.style.display='none';
-        phonemes.style.display='none';
-        phonemesO.style.display='inherit';
-        con.style.position='relative';
-        con.style.top=0;
-        con.style.right=0;
-        con.style.width='70%';
-        for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
-    }
+        var nav = document.getElementById('video-navigation');
+        var gotovideo = document.getElementById('gotovideo');
+        if(startProductBarPos<0)startProductBarPos=findPosY(nav);
+        if(pageYOffset>startProductBarPos){
+            nav.style.position='fixed';
+            nav.style.top=0;
+            gotovideo.style.display='inherit';
+        }else{
+            nav.style.position='relative';
+            gotovideo.style.display='none';
+        }
     }
 
 };
