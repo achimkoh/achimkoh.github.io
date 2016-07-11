@@ -10,8 +10,6 @@ $(function () {
   var attributes = {'id': RECORDER_APP_ID, 'name': RECORDER_APP_ID};
   swfobject.embedSWF("../files/2016/06/recorder.jpg", "flashcontent", appWidth, appHeight, "11.0.0", "", flashvars, params, attributes);
 
-  var window.duration;
-
   window.fwr_event_handler = function fwr_event_handler() {
     var name, $controls;
     switch (arguments[0]) {
@@ -80,6 +78,6 @@ $(document).on('click', '.playback', function() {
 	if (!$(".record").hasClass('recording')) {
 		$(".progress").css({ width: '0%' });
     	setTimeout(function() { FWRecorder.playBack('audio'); }, 5);
-    	$(".progress").animate({width: '100%'}, duration+10, function() {} );
+    	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
 	}
 });
