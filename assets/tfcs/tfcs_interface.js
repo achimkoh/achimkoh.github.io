@@ -53,7 +53,7 @@ window.onscroll=function(){
             con.style.position='fixed';
             con.style.top=contop;
             con.style.right='50px';
-            con.style.width='10%';
+            con.style.width='30%';
             for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             nav.style.position='relative';
