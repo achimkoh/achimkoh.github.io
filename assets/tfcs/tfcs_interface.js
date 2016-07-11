@@ -22,6 +22,8 @@ $(document).ready(function(){
 var startProductBarPos=-1;
 
 window.onscroll=function(){
+    if(window.innerWidth > 960) {
+
     var nav = document.getElementById('video-navigation');
     var con = document.getElementById('video-frame');
     var gotovideo = document.getElementById('gotovideo');
@@ -70,6 +72,8 @@ window.onscroll=function(){
         con.style.width='70%';
         for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
     }
+    }
+
 };
 
 function findPosY(obj) {
