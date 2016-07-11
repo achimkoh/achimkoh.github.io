@@ -73,12 +73,11 @@ window.onscroll=function(){
         }
     }else{
         var vid = document.getElementById('video-frame');
-        var nav = document.getElementById('video-navigation-mobile');
-        if(startProductBarPos<0)startProductBarPos=vid.offsetTop;
-        if(pageYOffset>startProductBarPos){
-            nav.style.display='inherit';
+        var navmobile = document.getElementById('video-navigation-mobile');
+        if(pageYOffset>vid.offsetTop){
+            navmobile.style.display='inherit';
         }else{
-            nav.style.display='none';
+            navmobile.style.display='none';
         }
     }
 
