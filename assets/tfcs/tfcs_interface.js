@@ -77,10 +77,13 @@ window.onscroll=function(){
         if(startProductBarPos<0)startProductBarPos=findPosY(nav);
         if(pageYOffset>startProductBarPos){
             nav.style.position='fixed';
-            nav.style.top=0;
+            nav.style.top='-6.5em';
+            nav.style.height='8.5em';
             gotovideo.style.display='inherit';
         }else{
             nav.style.position='relative';
+            nav.style.top=0;
+            nav.style.height='2em';
             gotovideo.style.display='none';
         }
     }
