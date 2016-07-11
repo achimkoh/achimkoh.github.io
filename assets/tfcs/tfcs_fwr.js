@@ -10,7 +10,7 @@ $(function () {
   var attributes = {'id': RECORDER_APP_ID, 'name': RECORDER_APP_ID};
   swfobject.embedSWF("../files/2016/06/recorder.jpg", "flashcontent", appWidth, appHeight, "11.0.0", "", flashvars, params, attributes);
 
-  var duration;
+  var window.duration;
 
   window.fwr_event_handler = function fwr_event_handler() {
     var name, $controls;
@@ -39,7 +39,7 @@ $(function () {
 
       case "recording_stopped":
         // FWRecorder.show();
-        duration = arguments[2].toFixed(2) * 1000;
+        window.duration = arguments[2].toFixed(2) * 1000;
 
         FWRecorder.stopObservingLevel();
         $(".audiolevel").css({height: 0});
