@@ -74,7 +74,7 @@ window.onscroll=function(){
     }else{
         var nav = document.getElementById('video-navigation');
         var gotovideo = document.getElementById('gotovideo');
-        if(startProductBarPos<0)startProductBarPos=findPosY(nav);
+        if(startProductBarPos<0)startProductBarPos=findPosY(nav)+nav.offsetHeight;
         if(pageYOffset>startProductBarPos){
             nav.style.position='fixed';
             nav.style.top='-16em';
