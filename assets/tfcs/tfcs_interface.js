@@ -1,9 +1,10 @@
 $(document).ready(function(){
+    // smooth scroll to inner links instead of jumps
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
-            var paddingtop = 0;
-            if(window.innerWidth > 1242) paddingtop = 75;
+        var paddingtop = 0;
+        if(window.innerWidth > 1242) paddingtop = 75;
 
 	    var target = this.hash;
 	    var $target = $(target);
@@ -14,11 +15,14 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
+
+    // fix flash object in a specific position on window
     var flashobject = document.getElementById('recorderApp');
     flashobject.style.position = "fixed";
 
 });
 
+// change layout based on amount of Y scroll
 var startProductBarPos=-1;
 
 window.onscroll=function(){
@@ -29,6 +33,7 @@ window.onscroll=function(){
         var phonemesO = document.getElementById('gotophonemes-original');
         var phonemes = document.getElementById('gotophonemes');
         var recbuttons = document.getElementsByClassName('recorder');
+        var entryContent = document.getElementsByClassName('entry-content')[0];
         var navtop;
         var contop;
         if(window.innerWidth > 1242){
@@ -54,6 +59,8 @@ window.onscroll=function(){
             con.style.top=contop;
             con.style.right='50px';
             con.style.width='30%';
+            entryContent.style.position='relative';
+            entryContent.style.left='-25%';
             for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             nav.style.position='relative';
@@ -69,6 +76,8 @@ window.onscroll=function(){
             con.style.top=0;
             con.style.right=0;
             con.style.width='70%';
+            entryContent.style.position='inherit';
+            entryContent.style.left=0;
             for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
