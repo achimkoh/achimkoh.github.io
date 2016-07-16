@@ -40,10 +40,10 @@ window.onscroll=function(){
         var contop;
         if(window.innerWidth > 1242){
             navtop = '75px';
-            contop = '125px';
+            contop = 125;
         }else{
             navtop = 0;
-            contop = '75px';
+            contop = 75;
         }
 
         if(startProductBarPos<0)startProductBarPos=findPosY(nav);
@@ -58,9 +58,9 @@ window.onscroll=function(){
             phonemes.style.display='inherit';
             phonemesO.style.display='none';
             con.style.position='fixed';
-            con.style.top=contop;
+            con.style.top=contop+'px';
             if(pageYOffset>clustersTop){
-                con.style.top=contop-pageYOffset+clustersTop;
+                con.style.top=(contop-pageYOffset+clustersTop)+'px';
             }
             con.style.right='50px';
             con.style.width='30%';
