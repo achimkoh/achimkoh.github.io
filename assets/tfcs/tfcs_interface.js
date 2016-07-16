@@ -66,6 +66,11 @@ window.onscroll=function(){
             con.style.width='30%';
             entryContent.style.position='relative';
             entryContent.style.left='-20%';
+            if(window.innerWidth < 1100) {
+                con.style.width='20%';
+                entryContent.style.left='-12%';
+            }
+
             for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             nav.style.position='relative';
