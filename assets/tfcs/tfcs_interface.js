@@ -4,7 +4,7 @@ $(document).ready(function(){
 	    e.preventDefault();
 
         var paddingtop = 0;
-        if(window.innerWidth > 1242) paddingtop = 75;
+        if(window.innerWidth > 1242) paddingtop = 135;
 
 	    var target = this.hash;
 	    var $target = $(target);
@@ -62,7 +62,7 @@ window.onscroll=function(){
             if(pageYOffset>clustersTop){
                 con.style.top=(contop-pageYOffset+clustersTop)+'px';
             }
-            con.style.right='50px';
+            con.style.right='5px';
             con.style.width='30%';
             entryContent.style.position='relative';
             entryContent.style.left='-25%';
