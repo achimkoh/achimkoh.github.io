@@ -84,7 +84,7 @@ window.onscroll=function(){
         var vid = document.getElementById('video-frame');
         var navmobile = document.getElementById('video-navigation-mobile');
         if(pageYOffset>vid.offsetTop){
-            navmobile.style.display='inherit';
+            navmobile.style.display='flex';
         }else{
             navmobile.style.display='none';
         }
