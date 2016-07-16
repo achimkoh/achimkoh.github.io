@@ -34,6 +34,8 @@ window.onscroll=function(){
         var phonemes = document.getElementById('gotophonemes');
         var recbuttons = document.getElementsByClassName('recorder');
         var entryContent = document.getElementsByClassName('entry-content')[0];
+        var clusters = document.getElementById('clusters');
+        var clustersTop = findPosY(clusters);
         var navtop;
         var contop;
         if(window.innerWidth > 1242){
@@ -57,6 +59,9 @@ window.onscroll=function(){
             phonemesO.style.display='none';
             con.style.position='fixed';
             con.style.top=contop;
+            if(pageYOffset>clustersTop){
+                con.style.top=contop-pageYOffset+clustersTop;
+            }
             con.style.right='50px';
             con.style.width='30%';
             entryContent.style.position='relative';
