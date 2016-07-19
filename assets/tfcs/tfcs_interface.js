@@ -1,4 +1,3 @@
-
 // change layout based on amount of Y scroll
 var startProductBarPos=-1;
 

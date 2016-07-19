@@ -89,3 +89,7 @@ $(document).on('click', '.playback', function() {
     	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
 	}
 });
+
+$(document).on('click', '.help', function() {
+  $(".help-text").toggle();
+});
