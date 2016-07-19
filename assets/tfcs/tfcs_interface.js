@@ -14,6 +14,8 @@ function moveThings() {
         var clustersTop = findPosY(clusters);
         var navtop;
         var contop;
+        var explanation = document.getElementById('phoneme-explanation');
+        var explanationVideo = document.getElementById('phoneme-explanation-video');
         if(window.innerWidth > 1242){
             navtop = '75px';
             contop = 125;
@@ -46,7 +48,8 @@ function moveThings() {
                 con.style.width='20%';
                 entryContent.style.left='-12%';
             }
-            $("#phoneme-explanation").detach().appendTo('#video-frame')
+            explanationVideo.style.display='initial';
+            explanation.style.visibility='hidden';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             nav.style.position='relative';
@@ -64,7 +67,8 @@ function moveThings() {
             con.style.width='70%';
             entryContent.style.position='inherit';
             entryContent.style.left=0;
-            $("#phoneme-explanation").detach().appendTo('#phoneme')
+            explanationVideo.style.display='none';
+            explanation.style.visibility='initial';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
