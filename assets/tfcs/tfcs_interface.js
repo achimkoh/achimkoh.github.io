@@ -3,14 +3,11 @@ $(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
-        var paddingtop = 0;
-        if(window.innerWidth > 1242) paddingtop = 135;
-
 	    var target = this.hash;
 	    var $target = $(target);
 
 	    $('html, body').stop().animate({
-	        'scrollTop': ($target.offset().top - paddingtop)
+	        'scrollTop': ($target.offset().top)
 	    }, 500, 'swing', function () {
 	        window.location.hash = target;
 	    });
@@ -71,7 +68,7 @@ window.onscroll=function(){
                 entryContent.style.left='-12%';
             }
 
-            for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
+            for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             nav.style.position='relative';
             nav.style.top=0;
@@ -88,7 +85,7 @@ window.onscroll=function(){
             con.style.width='70%';
             entryContent.style.position='inherit';
             entryContent.style.left=0;
-            for (var i =0; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
+            for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
         var vid = document.getElementById('video-frame');
