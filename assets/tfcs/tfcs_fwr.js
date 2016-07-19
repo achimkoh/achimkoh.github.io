@@ -64,7 +64,7 @@ $(document).on('click', '.record', function() {
 	}
 
     if ($(this).hasClass('recording')) {
-	    FWRecorder.configure(22, 67, 10, 4000);
+	    FWRecorder.configure(22, 80, 0, 0);
         FWRecorder.setUseEchoSuppression(true); 
         $(".progress").css({ width: '0%' });   	
     	setTimeout(function() { FWRecorder.record('audio', 'audio.wav'); }, 1);
