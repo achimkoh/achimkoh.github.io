@@ -130,9 +130,9 @@
       // need to wait until app is resized before displaying permissions screen
       var permissionCommand = function() {
         // if (options && options.permanent) {
-        //   Recorder.recorder.permitPermanently();
+          Recorder.recorder.permitPermanently();
         // } else {
-          Recorder.recorder.permit();
+          // Recorder.recorder.permit();
         // }
       };
       setTimeout(permissionCommand, 1);
