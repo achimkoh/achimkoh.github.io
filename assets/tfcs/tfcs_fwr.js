@@ -56,6 +56,14 @@ $(function () {
   }
 });
 
+$(document).ready(function(){
+    // fix flash object in a specific position on window
+    if (document.getElementById('recorderApp')) {
+        var flashobject = document.getElementById('recorderApp');
+        flashobject.style.position = "fixed";        
+    }
+});
+
 $(document).on('click', '.record', function() {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
