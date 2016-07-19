@@ -91,5 +91,5 @@ $(document).on('click', '.playback', function() {
 });
 
 $(document).on('click', '.help', function() {
-  $(".help-text").toggle();
+  $(".help-text").toggleClass('hidden');
 });
