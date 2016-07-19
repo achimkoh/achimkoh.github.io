@@ -1,7 +1,7 @@
 // change layout based on amount of Y scroll
 var startProductBarPos=-1;
 
-window.onscroll=function(){
+function moveThings() {
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
         var con = document.getElementById('video-frame');
@@ -75,7 +75,14 @@ window.onscroll=function(){
             navmobile.style.display='none';
         }
     }
+}
 
+window.onscroll=function(){
+    moveThings();
+};
+
+window.onresize=function(){
+    moveThings();
 };
 
 function findPosY(obj) {
