@@ -3,13 +3,12 @@ var startProductBarPos=-1;
 
 function moveThings() {
     if(window.innerWidth > 960) {
-        var nav = document.getElementById('video-navigation');
+        // var nav = document.getElementById('video-navigation');
         var con = document.getElementById('video-frame');
-        // var gotovideo = document.getElementById('gotovideo');
-        var phonemesO = document.getElementById('gotophonemes-original');
-        var phonemes = document.getElementById('gotophonemes');
+        // var phonemesO = document.getElementById('gotophonemes-original');
+        // var phonemes = document.getElementById('gotophonemes');
         var recbuttons = document.getElementsByClassName('recorder');
-        var entryContent = document.getElementsByClassName('entry-content')[0];
+        // var entryContent = document.getElementsByClassName('entry-content')[0];
         var clusters = document.getElementById('clusters');
         var clustersTop = findPosY(clusters);
         var navtop;
@@ -17,54 +16,64 @@ function moveThings() {
         var explanation = document.getElementById('phoneme-explanation');
         var explanationVideo = document.getElementById('phoneme-explanation-video');
         if(window.innerWidth > 1242){
-            navtop = '75px';
+            // navtop = '75px';
             contop = 125;
         }else{
-            navtop = 0;
+            // navtop = 0;
             contop = 75;
         }
 
         if(startProductBarPos<0)startProductBarPos=findPosY(nav);
         if(pageYOffset>startProductBarPos){
-            nav.style.position='fixed';
-            nav.style.top=navtop;
-            nav.style.display='flex';
-            nav.style.width='100%';
-            nav.style.height='2em';
-            nav.style.lineHeight='1em';
+            $('#video-navigation').addClass('minimized');
+            $('#video-frame').addClass('minimized');
+            // nav.style.position='fixed';
+            // nav.style.top=navtop;
+            // nav.style.display='flex';
+            // nav.style.width='100%';
+            // nav.style.height='2em';
+            // nav.style.lineHeight='1em';
             // gotovideo.style.display='inherit';
-            phonemes.style.display='inherit';
-            phonemesO.style.display='none';
-            con.style.position='fixed';
+            $('#gotophonemes').removeClass('display-none');
+            $('#gotophonemes-original').addClass('display-none');
+            // phonemes.style.display='inherit';
+            // phonemesO.style.display='none';
+            // con.style.position='fixed';
             con.style.top=contop+'px';
             if(pageYOffset>clustersTop){
                 con.style.top=(contop-pageYOffset+clustersTop)+'px';
             }
-            con.style.right='5px';
-            con.style.width='30%';
-            entryContent.style.position='relative';
-            entryContent.style.left='-20%';
+            // con.style.right='5px';
+            // con.style.width='30%';
+            $('.entry-content').addClass('shifted');
+            // entryContent.style.position='relative';
+            // entryContent.style.left='-20%';
             if(window.innerWidth < 1100) {
-                con.style.width='20%';
-                entryContent.style.left='-12%';
+                // con.style.width='20%';
+                // entryContent.style.left='-12%';
             }
             explanationVideo.style.display='initial';
             explanation.style.visibility='hidden';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
-            nav.style.position='relative';
-            nav.style.top=0;
-            nav.style.display='inline-block';
-            nav.style.width='30%';
-            nav.style.height='inherit';
-            nav.style.lineHeight='inherit';
+            $('#video-navigation').removeClass('minimized');
+            $('#video-frame').removeClass('minimized');
+            $('#gotophonemes').addClass('display-none');
+            $('#gotophonemes-original').removeClass('display-none');
+            $('.entry-content').removeClass('shifted');
+            // nav.style.position='relative';
+            // nav.style.top=0;
+            // nav.style.display='inline-block';
+            // nav.style.width='30%';
+            // nav.style.height='inherit';
+            // nav.style.lineHeight='inherit';
             // gotovideo.style.display='none';
-            phonemes.style.display='none';
-            phonemesO.style.display='inherit';
-            con.style.position='relative';
-            con.style.top=0;
-            con.style.right=0;
-            con.style.width='70%';
+            // phonemes.style.display='none';
+            // phonemesO.style.display='inherit';
+            // con.style.position='relative';
+            // con.style.top=0;
+            // con.style.right=0;
+            // con.style.width='70%';
             entryContent.style.position='inherit';
             entryContent.style.left=0;
             explanationVideo.style.display='none';
