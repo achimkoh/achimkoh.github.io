@@ -27,6 +27,7 @@ function moveThings() {
         if(pageYOffset>startProductBarPos){
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
+            $('#video').addClass('minimized');
             // nav.style.position='fixed';
             // nav.style.top=navtop;
             // nav.style.display='flex';
@@ -60,6 +61,7 @@ function moveThings() {
         }else{
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
+            $('#video').removeClass('minimized');
             $('#gotophonemes').addClass('display-none');
             $('#gotophonemes-original').removeClass('display-none');
             $('.entry-content').removeClass('shifted');
