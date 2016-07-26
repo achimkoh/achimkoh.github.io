@@ -3,7 +3,7 @@ var startProductBarPos=-1;
 
 function moveThings() {
     if(window.innerWidth > 960) {
-        // var nav = document.getElementById('video-navigation');
+        var nav = document.getElementById('video-navigation');
         var con = document.getElementById('video-frame');
         // var phonemesO = document.getElementById('gotophonemes-original');
         // var phonemes = document.getElementById('gotophonemes');
