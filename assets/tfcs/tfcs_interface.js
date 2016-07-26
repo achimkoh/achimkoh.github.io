@@ -52,8 +52,10 @@ function moveThings() {
                 // con.style.width='20%';
                 // entryContent.style.left='-12%';
             }
-            explanationVideo.style.display='initial';
-            explanation.style.visibility='hidden';
+            $('#phoneme-explanation').addClass('visibility-hidden');
+            $('#video-phoneme-explanation').removeClass('display-none');
+            // explanationVideo.style.display='initial';
+            // explanation.style.visibility='hidden';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             $('#video-navigation').removeClass('minimized');
@@ -61,6 +63,9 @@ function moveThings() {
             $('#gotophonemes').addClass('display-none');
             $('#gotophonemes-original').removeClass('display-none');
             $('.entry-content').removeClass('shifted');
+
+            $('#phoneme-explanation').removeClass('visibility-hidden');
+            $('#video-phoneme-explanation').addClass('display-none');
             // nav.style.position='relative';
             // nav.style.top=0;
             // nav.style.display='inline-block';
@@ -76,17 +81,19 @@ function moveThings() {
             // con.style.width='70%';
             // entryContent.style.position='inherit';
             // entryContent.style.left=0;
-            explanationVideo.style.display='none';
-            explanation.style.visibility='initial';
+            // explanationVideo.style.display='none';
+            // explanation.style.visibility='initial';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
         var vid = document.getElementById('video-frame');
-        var navmobile = document.getElementById('video-navigation-mobile');
+        // var navmobile = document.getElementById('video-navigation-mobile');
         if(pageYOffset>vid.offsetTop){
-            navmobile.style.display='flex';
+            $('#video-navigation-mobile').removeClass('display-none');
+            // navmobile.style.display='flex';
         }else{
-            navmobile.style.display='none';
+            $('#video-navigation-mobile').addClass('display-none');
+            // navmobile.style.display='none';
         }
     }
 }
