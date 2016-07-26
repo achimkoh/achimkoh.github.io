@@ -74,8 +74,8 @@ function moveThings() {
             // con.style.top=0;
             // con.style.right=0;
             // con.style.width='70%';
-            entryContent.style.position='inherit';
-            entryContent.style.left=0;
+            // entryContent.style.position='inherit';
+            // entryContent.style.left=0;
             explanationVideo.style.display='none';
             explanation.style.visibility='initial';
             for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
