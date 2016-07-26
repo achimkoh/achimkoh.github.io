@@ -22,7 +22,6 @@ function moveThings() {
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
             $('#video').addClass('minimized');
-            $('#phoneme').removeClass('display-none');
             $('#gotophonemes').removeClass('display-none');
             $('#gotophonemes-original').addClass('display-none');
             vid.style.top=contop+'px';
@@ -38,7 +37,6 @@ function moveThings() {
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
             $('#video').removeClass('minimized');
-            $('#phoneme').addClass('display-none');
             $('#gotophonemes').addClass('display-none');
             $('#gotophonemes-original').removeClass('display-none');
             $('.entry-content').removeClass('shifted');
