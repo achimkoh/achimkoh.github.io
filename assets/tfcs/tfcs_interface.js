@@ -31,7 +31,7 @@ function moveThings() {
             $('.entry-content').addClass('shifted');
             $('#phoneme-explanation').addClass('visibility-hidden');
             $('#video-phoneme-explanation').removeClass('display-none');
-            $('button.recorder').each().addClass('minimized');
+            $('button.recorder').addClass('minimized');
             // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             $('#video-navigation').removeClass('minimized');
@@ -44,7 +44,7 @@ function moveThings() {
             $('#phoneme-explanation').removeClass('visibility-hidden');
             $('#video-phoneme-explanation').addClass('display-none');
             vid.style.top=0;
-            $('button.recorder').each().removeClass('minimized');
+            $('button.recorder').removeClass('minimized');
             // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
@@ -62,7 +62,7 @@ function moveThings() {
         $('.entry-content').removeClass('shifted');
         $('#phoneme-explanation').removeClass('visibility-hidden');
         $('#video-phoneme-explanation').addClass('display-none');
-        $('button.recorder').each().removeClass('minimized');
+        $('button.recorder').removeClass('minimized');
         vid.style.top=0;
 
     }
