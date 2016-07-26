@@ -6,6 +6,7 @@ function moveThings() {
 
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
+        var exp = document.getElementById('phoneme-explanation');
         var recbuttons = document.getElementsByClassName('recorder');
         var consonants = document.getElementById('in-sentences');
         var consonantsTop = findPosY(consonants);
@@ -17,7 +18,7 @@ function moveThings() {
             contop = 75;
         }
 
-        if(startProductBarPos<0)startProductBarPos=findPosY(nav);
+        if(startProductBarPos<0)startProductBarPos=findPosY(exp);
         if(pageYOffset>startProductBarPos){
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
