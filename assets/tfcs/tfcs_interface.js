@@ -94,7 +94,7 @@ function moveThings() {
             $('.video-navigation-mobile').addClass('minimized');
             // navmobile.style.display='flex';
         }else{
-            $('.video-navigation-mobile').addClass('minimized');
+            $('.video-navigation-mobile').removeClass('minimized');
             // navmobile.style.display='none';
         }
     }
