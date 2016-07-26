@@ -7,7 +7,7 @@ function moveThings() {
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
         var recbuttons = document.getElementsByClassName('recorder');
-        var consonants = document.getElementById('consonants');
+        var consonants = document.getElementById('in-sentences');
         var consonantsTop = findPosY(consonants);
 
         var contop;
