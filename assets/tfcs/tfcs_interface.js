@@ -19,7 +19,7 @@ function moveThings() {
         }
 
         if(startProductBarPos<0)startProductBarPos=findPosY(exp);
-        if(pageYOffset>startProductBarPos){
+        if(pageYOffset>startProductBarPos-200){
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
             $('#video').addClass('minimized');
