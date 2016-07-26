@@ -71,7 +71,7 @@ function moveThings() {
             // phonemes.style.display='none';
             // phonemesO.style.display='inherit';
             // con.style.position='relative';
-            // con.style.top=0;
+            con.style.top=0;
             // con.style.right=0;
             // con.style.width='70%';
             // entryContent.style.position='inherit';
