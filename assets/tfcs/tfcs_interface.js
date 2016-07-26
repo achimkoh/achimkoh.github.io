@@ -92,4 +92,6 @@ function findPosY(obj) {
 
 $(document).ready(function() {
     $('#phoneme').html(document.title);
+    $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())
+    $('a[href$="#in-sentences"]').html(document.title + ' ' + $('a[href$="#in-sentences"]').html())
 });
