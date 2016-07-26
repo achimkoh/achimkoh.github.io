@@ -89,10 +89,10 @@ function moveThings() {
         var vid = document.getElementById('video-frame');
         // var navmobile = document.getElementById('video-navigation-mobile');
         if(pageYOffset>vid.offsetTop){
-            $('#video-navigation-mobile').removeClass('display-none');
+            $('.video-navigation-mobile').removeClass('display-none');
             // navmobile.style.display='flex';
         }else{
-            $('#video-navigation-mobile').addClass('display-none');
+            $('.video-navigation-mobile').addClass('display-none');
             // navmobile.style.display='none';
         }
     }
