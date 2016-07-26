@@ -2,9 +2,10 @@
 var startProductBarPos=-1;
 
 function moveThings() {
+    var vid = document.getElementById('video-frame');
+
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
-        var con = document.getElementById('video-frame');
         var recbuttons = document.getElementsByClassName('recorder');
         var clusters = document.getElementById('clusters');
         var clustersTop = findPosY(clusters);
@@ -23,14 +24,15 @@ function moveThings() {
             $('#video').addClass('minimized');
             $('#gotophonemes').removeClass('display-none');
             $('#gotophonemes-original').addClass('display-none');
-            con.style.top=contop+'px';
+            vid.style.top=contop+'px';
             if(pageYOffset>clustersTop){
-                con.style.top=(contop-pageYOffset+clustersTop)+'px';
+                vid.style.top=(contop-pageYOffset+clustersTop)+'px';
             }
             $('.entry-content').addClass('shifted');
             $('#phoneme-explanation').addClass('visibility-hidden');
             $('#video-phoneme-explanation').removeClass('display-none');
-            for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
+            $('button.recorder').each().addClass('minimized');
+            // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
@@ -41,11 +43,11 @@ function moveThings() {
 
             $('#phoneme-explanation').removeClass('visibility-hidden');
             $('#video-phoneme-explanation').addClass('display-none');
-            con.style.top=0;
-            for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
+            vid.style.top=0;
+            $('button.recorder').each().removeClass('minimized');
+            // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
-        var vid = document.getElementById('video-frame');
         if(pageYOffset>vid.offsetTop){
             $('.video-navigation-mobile').addClass('minimized');
         }else{
@@ -58,9 +60,9 @@ function moveThings() {
         $('#gotophonemes').addClass('display-none');
         $('#gotophonemes-original').removeClass('display-none');
         $('.entry-content').removeClass('shifted');
-
         $('#phoneme-explanation').removeClass('visibility-hidden');
         $('#video-phoneme-explanation').addClass('display-none');
+        $('button.recorder').each().removeClass('minimized');
         vid.style.top=0;
 
     }
