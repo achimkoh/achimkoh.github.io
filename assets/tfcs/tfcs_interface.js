@@ -7,8 +7,8 @@ function moveThings() {
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
         var recbuttons = document.getElementsByClassName('recorder');
-        var clusters = document.getElementById('clusters');
-        var clustersTop = findPosY(clusters);
+        var consonants = document.getElementById('consonants');
+        var consonantsTop = findPosY(consonants);
 
         var contop;
         if(window.innerWidth > 1242){
@@ -25,8 +25,8 @@ function moveThings() {
             $('#gotophonemes').removeClass('display-none');
             $('#gotophonemes-original').addClass('display-none');
             vid.style.top=contop+'px';
-            if(pageYOffset>clustersTop){
-                vid.style.top=(contop-pageYOffset+clustersTop)+'px';
+            if(pageYOffset>consonantsTop){
+                vid.style.top=(contop-pageYOffset+consonantsTop)+'px';
             }
             $('.entry-content').addClass('shifted');
             $('#phoneme-explanation').addClass('visibility-hidden');
