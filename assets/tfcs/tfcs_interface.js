@@ -20,6 +20,7 @@ function moveThings() {
 
         if(startProductBarPos<0)startProductBarPos=findPosY(exp);
         if(pageYOffset>startProductBarPos-300){
+            $('#container').addClass('noshadow');
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
             $('#video').addClass('minimized');
@@ -35,6 +36,7 @@ function moveThings() {
             $('button.recorder').addClass('minimized');
             // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
+            $('#container').removeClass('noshadow');
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
             $('#video').removeClass('minimized');
