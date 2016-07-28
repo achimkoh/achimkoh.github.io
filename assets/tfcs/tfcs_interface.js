@@ -1,9 +1,12 @@
+// adapted from Jim W's code: http://stackoverflow.com/a/17494943
 // change layout based on amount of Y scroll
 var startProductBarPos=-1;
 
 function moveThings() {
+    // video position is used as reference point
     var vid = document.getElementById('video-frame');
 
+    // desktop view involves moving around lots of things
     if(window.innerWidth > 960) {
         var nav = document.getElementById('video-navigation');
         var exp = document.getElementById('phoneme-explanation');
@@ -11,6 +14,7 @@ function moveThings() {
         var consonants = document.getElementById('in-sentences');
         var consonantsTop = findPosY(consonants);
 
+        // adjust top margin to TfCS header position (header stops being fixed at 1242px)
         var contop;
         if(window.innerWidth > 1242){
             contop = 125;
@@ -26,15 +30,14 @@ function moveThings() {
             $('#video').addClass('minimized');
             $('#gotophonemes').removeClass('display-none');
             $('#gotophonemes-original').addClass('display-none');
+            $('.entry-content').addClass('shifted');
+            $('#phoneme-explanation').addClass('visibility-hidden');
+            $('#video-phoneme-explanation').removeClass('display-none');
             vid.style.top=contop+'px';
             if(pageYOffset>consonantsTop){
                 vid.style.top=(contop-pageYOffset+consonantsTop)+'px';
             }
-            $('.entry-content').addClass('shifted');
-            $('#phoneme-explanation').addClass('visibility-hidden');
-            $('#video-phoneme-explanation').removeClass('display-none');
             $('button.recorder').addClass('minimized');
-            // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='0 5px';
         }else{
             $('#container').removeClass('noshadow');
             $('#video-navigation').removeClass('minimized');
@@ -43,20 +46,20 @@ function moveThings() {
             $('#gotophonemes').addClass('display-none');
             $('#gotophonemes-original').removeClass('display-none');
             $('.entry-content').removeClass('shifted');
-
             $('#phoneme-explanation').removeClass('visibility-hidden');
             $('#video-phoneme-explanation').addClass('display-none');
             vid.style.top=0;
             $('button.recorder').removeClass('minimized');
-            // for (var i=1; i < recbuttons.length; i++) recbuttons[i].style.margin='25px 5px';
         }
     }else{
+        // mobile view is much simpler
         if(pageYOffset>vid.offsetTop){
             $('.video-navigation-mobile').addClass('minimized');
         }else{
             $('.video-navigation-mobile').removeClass('minimized');
         }
 
+        // things need to be reset when window shrinks from desktop view to mobile view
         $('#video-navigation').removeClass('minimized');
         $('#video-frame').removeClass('minimized');
         $('#video').removeClass('minimized');
@@ -93,6 +96,7 @@ function findPosY(obj) {
     return curtop;
 }
 
+// add current page's title (which should be the phoneme) to navigation menu
 $(document).ready(function() {
     $('#phoneme').html(document.title);
     $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())

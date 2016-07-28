@@ -1,3 +1,6 @@
+// from https://github.com/michalstocki/FlashWavRecorder/
+// adapted for use in Baruch College's TfCS Wordpress website
+
 (function(window) {
   var Recorder;
 
