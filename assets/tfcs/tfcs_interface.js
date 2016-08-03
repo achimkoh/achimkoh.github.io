@@ -11,8 +11,8 @@ function moveThings() {
         var nav = document.getElementById('video-navigation');
         var exp = document.getElementById('phoneme-explanation');
         var recbuttons = document.getElementsByClassName('recorder');
-        var consonants = document.getElementById('in-sentences');
-        var consonantsTop = findPosY(consonants);
+        var videoLimitElement = document.getElementById('whats-next');
+        var videoLimit = findPosY(videoLimitElement);
 
         // adjust top margin to TfCS header position (header stops being fixed at 1242px)
         var contop;
@@ -34,8 +34,8 @@ function moveThings() {
             $('#phoneme-explanation').addClass('visibility-hidden');
             $('#video-phoneme-explanation').removeClass('display-none');
             vid.style.top=contop+'px';
-            if(pageYOffset>consonantsTop){
-                vid.style.top=(contop-pageYOffset+consonantsTop)+'px';
+            if(pageYOffset>videoLimit){
+                vid.style.top=(contop-pageYOffset+videoLimit)+'px';
             }
             $('button.recorder').addClass('minimized');
         }else{
