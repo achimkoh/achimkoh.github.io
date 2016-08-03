@@ -1,6 +1,6 @@
 // adapted from Jim W's code: http://stackoverflow.com/a/17494943
 // change layout based on amount of Y scroll
-var startProductBarPos=-1;
+var minimizeTriggerPosition=-1;
 
 function moveThings() {
     // video position is used as reference point
@@ -8,37 +8,34 @@ function moveThings() {
 
     // desktop view involves moving around lots of things
     if(window.innerWidth > 960) {
-        var nav = document.getElementById('video-navigation');
-        var exp = document.getElementById('phoneme-explanation');
-        var recbuttons = document.getElementsByClassName('recorder');
+        var minimizeTrigger = document.getElementById('phoneme-explanation');
         var videoLimitElement = document.getElementById('whats-next');
         var videoLimit = findPosY(videoLimitElement);
 
         // adjust top margin to TfCS header position (header stops being fixed at 1242px)
-        var contop;
+        var marginTop;
         if(window.innerWidth > 1242){
-            contop = 125;
+            marginTop = 125;
         }else{
-            contop = 75;
+            marginTop = 75;
         }
 
-        if(startProductBarPos<0)startProductBarPos=findPosY(exp);
-        if(pageYOffset>startProductBarPos-300){
+        if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
+
+        if(pageYOffset>minimizeTriggerPosition-300){
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
             $('#video').addClass('minimized');
             $('.entry-content').addClass('shifted');
-            $('#phoneme-explanation').addClass('visibility-hidden');
-            vid.style.top=contop+'px';
+            vid.style.top=marginTop+'px';
             if(pageYOffset>videoLimit){
-                vid.style.top=(contop-pageYOffset+videoLimit)+'px';
+                vid.style.top=(marginTop-pageYOffset+videoLimit)+'px';
             }
         }else{
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
             $('#video').removeClass('minimized');
             $('.entry-content').removeClass('shifted');
-            $('#phoneme-explanation').removeClass('visibility-hidden');
             vid.style.top=0;
         }
     }else{
@@ -54,7 +51,6 @@ function moveThings() {
         $('#video-frame').removeClass('minimized');
         $('#video').removeClass('minimized');
         $('.entry-content').removeClass('shifted');
-        $('#phoneme-explanation').removeClass('visibility-hidden');
         vid.style.top=0;
 
     }
