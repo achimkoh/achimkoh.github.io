@@ -24,32 +24,22 @@ function moveThings() {
 
         if(startProductBarPos<0)startProductBarPos=findPosY(exp);
         if(pageYOffset>startProductBarPos-300){
-            $('#container').addClass('noshadow');
             $('#video-navigation').addClass('minimized');
             $('#video-frame').addClass('minimized');
             $('#video').addClass('minimized');
-            $('#gotophonemes').removeClass('display-none');
-            $('#gotophonemes-original').addClass('display-none');
             $('.entry-content').addClass('shifted');
             $('#phoneme-explanation').addClass('visibility-hidden');
-            $('#video-phoneme-explanation').removeClass('display-none');
             vid.style.top=contop+'px';
             if(pageYOffset>videoLimit){
                 vid.style.top=(contop-pageYOffset+videoLimit)+'px';
             }
-            $('button.recorder').addClass('minimized');
         }else{
-            $('#container').removeClass('noshadow');
             $('#video-navigation').removeClass('minimized');
             $('#video-frame').removeClass('minimized');
             $('#video').removeClass('minimized');
-            $('#gotophonemes').addClass('display-none');
-            $('#gotophonemes-original').removeClass('display-none');
             $('.entry-content').removeClass('shifted');
             $('#phoneme-explanation').removeClass('visibility-hidden');
-            $('#video-phoneme-explanation').addClass('display-none');
             vid.style.top=0;
-            $('button.recorder').removeClass('minimized');
         }
     }else{
         // mobile view is much simpler
@@ -63,12 +53,8 @@ function moveThings() {
         $('#video-navigation').removeClass('minimized');
         $('#video-frame').removeClass('minimized');
         $('#video').removeClass('minimized');
-        $('#gotophonemes').addClass('display-none');
-        $('#gotophonemes-original').removeClass('display-none');
         $('.entry-content').removeClass('shifted');
         $('#phoneme-explanation').removeClass('visibility-hidden');
-        $('#video-phoneme-explanation').addClass('display-none');
-        $('button.recorder').removeClass('minimized');
         vid.style.top=0;
 
     }
