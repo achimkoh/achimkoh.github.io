@@ -10,7 +10,7 @@ function moveThings() {
     if(window.innerWidth > 960) {
         var minimizeTrigger = document.getElementById('phoneme-explanation');
         var videoLimitElement = document.getElementById('whats-next');
-        var videoLimit = findPosY(videoLimitElement) - 600;
+        var videoLimit = findPosY(videoLimitElement) - 700;
 
         // adjust top margin to TfCS header position (header stops being fixed at 1242px)
         var marginTop;
