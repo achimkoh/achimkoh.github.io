@@ -52,7 +52,7 @@ One thing to note is that approximately 22% of these companies do not have a web
 
 More than half of the companies are located in the capital, Seoul; Seoul and the surrounding Gyeonggi region combined add up to 1,038 companies, which is also made evident in the following map of all companies.
 
-![]({{site.baseurl}}/assets/gov-websites/top_all.png)
+![]({{site.baseurl}}/assets/gov-websites/all.png)
 
 Since Seoul and Gyeonggi amount to about half of the South Korean population, the number of businesses is not especially surprising. However, not only are there more businesses in the capital area, but they also tend to do better. This map of the top 50 grossing companies show much more companies around Seoul than what a simple proportional distribution would show:
 
