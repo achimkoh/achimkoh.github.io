@@ -98,6 +98,6 @@ $(document).on('click', '.playback', function() {
 });
 
 // toggles help pop-up text next to recorder buttons
-$(document).on('click', '.help', function() {
+$(document).on('hover', '.help', function() {
   $(".help-text").toggleClass('display-none');
 });
