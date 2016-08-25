@@ -93,6 +93,7 @@ $(document).on('click', '.playback', function() {
 		$(".progress").css({ width: '0%' });
     	setTimeout(function() { FWRecorder.playBack('audio'); }, 5);
     	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
+      setTimeout(function() { $(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
 	}
 });
 
