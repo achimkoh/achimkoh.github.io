@@ -101,16 +101,16 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".help-text").toggleClass('display-none');
     }, 2000);
+
+    $('.playback-slow').on('click', function() {
+        document.getElementById('video').playbackRate = 0.5;
+        document.getElementById('video').play();
+        return false;
+    });
+    $('.playback-normal').on('click', function() {
+        document.getElementById('video').playbackRate = 1;
+        document.getElementById('video').play();
+        return false;
+    });
 });
 
-$('.playback-slow').click(function() {
-    document.getElementById('video').playbackRate = 0.5;
-    document.getElementById('video').play();
-    return false;
-});
-
-$('.playback-normal').click(function() {
-    document.getElementById('video').playbackRate = 1;
-    document.getElementById('video').play();
-    return false;
-});
