@@ -100,5 +100,17 @@ $(document).ready(function() {
     $(".help-text").toggleClass('display-none');
     setTimeout(function() {
         $(".help-text").toggleClass('display-none');
-    }, 1000);
+    }, 2000);
 });
+
+$("#playbackSlow").onclick(function() {
+    document.getElementById('video').playbackRate = 0.5;
+    document.getElementById('video').play();
+    return false;
+})
+
+$("#playbackNormal").onclick(function() {
+    document.getElementById('video').playbackRate = 1;
+    document.getElementById('video').play();
+    return false;
+})
