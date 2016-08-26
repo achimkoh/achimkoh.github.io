@@ -102,15 +102,20 @@ $(document).ready(function() {
         $(".help-text").toggleClass('display-none');
     }, 2000);
 
-    $('.playback-slow').on('click', function() {
+    $('.playback-slow').on('click', function(e) {
         document.getElementById('video').playbackRate = 0.5;
         document.getElementById('video').play();
+        $('.playback-slow').css("font-weight", "bold")
+        $('.playback-normal').css("font-weight", "normal")
         return false;
     });
     $('.playback-normal').on('click', function() {
         document.getElementById('video').playbackRate = 1;
         document.getElementById('video').play();
+        $('.playback-slow').css("font-weight", "normal")
+        $('.playback-normal').css("font-weight", "bold")
         return false;
     });
+    $('.playback-normal').css("font-weight", "bold")
 });
 
