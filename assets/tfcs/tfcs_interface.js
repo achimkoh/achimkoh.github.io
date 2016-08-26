@@ -118,9 +118,11 @@ $(document).ready(function() {
     });
     $('.playback-normal').css("font-weight", "bold")
 
-    $('.trigger-hover').hover(function(e) {
-        $('.recorder').css("transform", "scale(1.1)");
-        setTimeout(function(){$('.recorder').css("transform", "scale(1)");}, 300);
+    $('.trigger-hover').hover(function() {
+        while (True) {
+            setTimeout(function(){$('.recorder').css("transform", "scale(1.1)");}, 250);
+            setTimeout(function(){$('.recorder').css("transform", "scale(1)");}, 250);
+        }
     });
 });
 
