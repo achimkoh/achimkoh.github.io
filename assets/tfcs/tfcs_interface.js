@@ -103,13 +103,13 @@ $(document).ready(function() {
     }, 2000);
 });
 
-$("#playbackSlow").onclick(function() {
+$("#playbackSlow").click(function() {
     document.getElementById('video').playbackRate = 0.5;
     document.getElementById('video').play();
     return false;
 });
 
-$("#playbackNormal").onclick(function() {
+$("#playbackNormal").click(function() {
     document.getElementById('video').playbackRate = 1;
     document.getElementById('video').play();
     return false;
