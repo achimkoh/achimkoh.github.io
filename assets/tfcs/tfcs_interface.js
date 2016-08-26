@@ -117,5 +117,10 @@ $(document).ready(function() {
         return false;
     });
     $('.playback-normal').css("font-weight", "bold")
+
+    $('.trigger-hover').hover(function(e) {
+        $('.recorder').css("transform", "scale(1.1)");
+        setTimeout(function(){$('.recorder').css("transform", "scale(1)");}, 300);
+    });
 });
 
