@@ -75,9 +75,6 @@ $(document).on('click', '.record', function() {
 	} else {
 	    $(this).toggleClass('recording'); 
 	}
-
-  FWRecorder.stopPlayBack();
-
     if ($(this).hasClass('recording')) {
 	    FWRecorder.configure(22, 80, 1, 0);
         FWRecorder.setUseEchoSuppression(true); 
