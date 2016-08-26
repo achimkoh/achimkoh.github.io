@@ -107,10 +107,10 @@ $("#playbackSlow").onclick(function() {
     document.getElementById('video').playbackRate = 0.5;
     document.getElementById('video').play();
     return false;
-})
+});
 
 $("#playbackNormal").onclick(function() {
     document.getElementById('video').playbackRate = 1;
     document.getElementById('video').play();
     return false;
-})
+});
