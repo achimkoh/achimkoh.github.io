@@ -119,11 +119,9 @@ $(document).ready(function() {
     $('.playback-normal').css("font-weight", "bold")
 
     $('.trigger-hover').mouseover(function() {
-        $('button.recorder').css("background-color", "#ffc438");
-        $('button.recorder').css("transform", "scale(1.1)");
+        $('button.recorder').addClass("button-hover-effect");
         setTimeout(function() {
-            $('button.recorder').css("transform", "scale(1)");
-            $('button.recorder').css("background-color", "#f0f0f0");
+            $('button.recorder').removeClass("button-hover-effect");
         }, 300);
     });
 });
