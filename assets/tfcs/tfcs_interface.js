@@ -97,4 +97,8 @@ $(document).ready(function() {
     $('#phoneme').html(document.title);
     $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())
     $('a[href$="#in-sentences"]').html(document.title + ' ' + $('a[href$="#in-sentences"]').html())
+    $(".help-text").toggleClass('display-none');
+    setTimeout(function() {
+        $(".help-text").toggleClass('display-none');
+    }, 1000);
 });
