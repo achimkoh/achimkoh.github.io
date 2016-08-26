@@ -119,10 +119,10 @@ $(document).ready(function() {
     $('.playback-normal').css("font-weight", "bold")
 
     $('.trigger-hover').hover(function() {
-        while (True) {
-            setTimeout(function(){$('.recorder').css("transform", "scale(1.1)");}, 250);
-            setTimeout(function(){$('.recorder').css("transform", "scale(1)");}, 250);
-        }
+        $('.recorder').css("background-color", "#ffc438");
+        $('.recorder').css("transform", "scale(1.1)");
+        $('.recorder').css("transform", "scale(1)");
+        $('.recorder').css("background-color", "#f0f0f0");
     });
 });
 
