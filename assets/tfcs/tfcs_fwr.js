@@ -89,12 +89,14 @@ $(document).on('click', '.record', function() {
 
 // animates play button
 $(document).on('click', '.playback', function() {
-	if (!$(".record").hasClass('recording')) {
-		$(".progress").css({ width: '0%' });
-    	setTimeout(function() { FWRecorder.playBack('audio'); }, 5);
-    	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
-      setTimeout(function() { $(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
-	}
+  if ($(".record").hasClass('recording')) {
+    FWRecorder.stopRecording();
+    setTimeout(function() { $(".record").removeClass('recording'); }, 5);
+  }
+	$(".progress").css({ width: '0%' });
+	setTimeout(function() { FWRecorder.playBack('audio'); }, 5);
+	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
+  setTimeout(function() { $(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
 });
 
 // toggles help pop-up text next to recorder buttons
