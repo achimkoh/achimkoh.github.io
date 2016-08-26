@@ -56,22 +56,22 @@ function moveThings() {
     }
 }
 
-function snapToExercise() {
-    var exercises = document.getElementsByClassName("exercise");
-    for (var i = 0; i < exercises.length; i++) {
-        if (Math.abs(pageYOffset - exercises[i].offsetTop) < 100) {
-            $('html, body').animate({
-                scrollTop: exercises[i].offsetTop
-            }, 500, function() {});
-        }
-    }
-}
+// function snapToExercise() {
+//     var exercises = document.getElementsByClassName("exercise");
+//     for (var i = 0; i < exercises.length; i++) {
+//         if (Math.abs(pageYOffset - exercises[i].offsetTop) < 100) {
+//             $('html, body').animate({
+//                 scrollTop: exercises[i].offsetTop
+//             }, 500, function() {});
+//         }
+//     }
+// }
 
 window.onscroll=function(){
     moveThings();
-    setTimeout(function() {
-        snapToExercise();
-    }, 200);
+    // setTimeout(function() {
+    //     snapToExercise();
+    // }, 200);
 };
 
 window.onresize=function(){
