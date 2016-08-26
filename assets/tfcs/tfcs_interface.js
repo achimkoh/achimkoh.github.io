@@ -118,7 +118,7 @@ $(document).ready(function() {
     });
     $('.playback-normal').css("font-weight", "bold")
 
-    $('.trigger-hover').hover(function() {
+    $('.trigger-hover').mouseover(function() {
         $('button.recorder').css("background-color", "#ffc438");
         $('button.recorder').css("transform", "scale(1.1)");
         setTimeout(function() {
