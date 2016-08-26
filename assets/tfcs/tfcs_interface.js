@@ -69,7 +69,9 @@ function snapToExercise() {
 
 window.onscroll=function(){
     moveThings();
-    snapToExercise();
+    setTimeout(function() {
+        snapToExercise();
+    }, 200);
 };
 
 window.onresize=function(){
