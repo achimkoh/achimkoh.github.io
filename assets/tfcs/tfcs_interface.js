@@ -119,10 +119,12 @@ $(document).ready(function() {
     $('.playback-normal').css("font-weight", "bold")
 
     $('.trigger-hover').hover(function() {
-        $('.recorder').css("background-color", "#ffc438");
-        $('.recorder').css("transform", "scale(1.1)");
-        $('.recorder').css("transform", "scale(1)");
-        $('.recorder').css("background-color", "#f0f0f0");
+        $('button.recorder').css("background-color", "#ffc438");
+        $('button.recorder').css("transform", "scale(1.1)");
+        setTimeout(function() {
+            $('button.recorder').css("transform", "scale(1)");
+            $('button.recorder').css("background-color", "#f0f0f0");
+        }, 300);
     });
 });
 
