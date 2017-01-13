@@ -4,8 +4,8 @@
    * These URLs can't be used, so download these files from the URL, store locally and then
    * change the values `workerPath` and `mp3WorkerPath` in jquery.voice.js
    */
-  var WORKER_PATH = 'https://lab.subinsb.com/projects/jquery/voice/recorderWorker.js';
-  var mp3WorkerPath = 'https://lab.subinsb.com/projects/jquery/voice/mp3Worker.js';
+  var WORKER_PATH = '../files/2017/01/recorderWorker.txt';
+  var mp3WorkerPath = '../files/2017/01/mp3Worker.txt';
 
   var Recorder = function(source, cfg){
     var config = cfg || {};

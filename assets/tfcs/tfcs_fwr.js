@@ -1,7 +1,7 @@
 // from https://github.com/michalstocki/FlashWavRecorder/
 // adapted for use in Baruch College's TfCS Wordpress website
 
-$(function () {
+jQuery(function ($) {
 
   var RECORDER_APP_ID = "recorderApp";
 //  var $level = $('.level .progress');
@@ -61,7 +61,7 @@ $(function () {
 
 // fix flash object in a specific position on window. 
 // this way the flash object being resized will not mess with the page layout
-$(document).ready(function(){
+jQuery(document).ready(function(){
     if (document.getElementById('recorderApp')) {
         var flashobject = document.getElementById('recorderApp');
         flashobject.style.position = "fixed";        
@@ -69,7 +69,7 @@ $(document).ready(function(){
 });
 
 // pressing the record button first asks permission and triggers recording
-$(document).on('click', '.record', function() {
+jQuery(document).on('click', '.record', function($) {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
 	} else {
@@ -87,7 +87,7 @@ $(document).on('click', '.record', function() {
 });
 
 // animates play button
-$(document).on('click', '.playback', function() {
+jQuery(document).on('click', '.playback', function($) {
   if ($(".record").hasClass('recording')) {
     FWRecorder.stopRecording();
     setTimeout(function() { $(".record").removeClass('recording'); }, 5);
@@ -99,6 +99,6 @@ $(document).on('click', '.playback', function() {
 });
 
 // toggles help pop-up text next to recorder buttons
-$(document).on('hover', '.help', function() {
+jQuery(document).on('hover', '.help', function($) {
   $(".help-text").toggleClass('display-none');
 });

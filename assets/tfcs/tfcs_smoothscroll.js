@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
     // smooth scroll to inner links instead of jumps
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
