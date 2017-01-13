@@ -69,7 +69,7 @@ jQuery(document).ready(function(){
 });
 
 // pressing the record button first asks permission and triggers recording
-jQuery(document).on('click', '.record', function($) {
+jQuery(document).on('click', '.record', function ($) {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
 	} else {
@@ -87,7 +87,7 @@ jQuery(document).on('click', '.record', function($) {
 });
 
 // animates play button
-jQuery(document).on('click', '.playback', function($) {
+jQuery(document).on('click', '.playback', function ($) {
   if ($(".record").hasClass('recording')) {
     FWRecorder.stopRecording();
     setTimeout(function() { $(".record").removeClass('recording'); }, 5);
@@ -99,6 +99,6 @@ jQuery(document).on('click', '.playback', function($) {
 });
 
 // toggles help pop-up text next to recorder buttons
-jQuery(document).on('hover', '.help', function($) {
-  $(".help-text").toggleClass('display-none');
+jQuery(document).on('hover', '.help', function ($) {
+  $(".help-text").toggleClass('display-none'); 
 });
