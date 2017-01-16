@@ -1,7 +1,7 @@
 // from https://github.com/michalstocki/FlashWavRecorder/
 // adapted for use in Baruch College's TfCS Wordpress website
 
-jQuery(function ($) {
+jQuery(function () {
 
   var RECORDER_APP_ID = "recorderApp";
 //  var $level = $('.level .progress');
@@ -43,19 +43,19 @@ jQuery(function ($) {
         window.duration = arguments[2].toFixed(2) * 1000;
 
         FWRecorder.stopObservingLevel();
-        $(".audiolevel").css({height: 0});
+        jQuery(".audiolevel").css({height: 0});
         break;
 
       case "microphone_level":
-      	var curLevel = $(".audiolevel").height();
-        $(".audiolevel").css({height: (arguments[1]*90 + curLevel*10/40) + '%'});
+      	var curLevel = jQuery(".audiolevel").height();
+        jQuery(".audiolevel").css({height: (arguments[1]*90 + curLevel*10/40) + '%'});
         break;
 
     }
   };
 
   function recorderEl() {
-    return $('#' + RECORDER_APP_ID);
+    return jQuery('#' + RECORDER_APP_ID);
   }
 });
 
@@ -69,16 +69,16 @@ jQuery(document).ready(function(){
 });
 
 // pressing the record button first asks permission and triggers recording
-jQuery(document).on('click', '.record', function ($) {
+jQuery(document).on('click', '.record', function () {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
 	} else {
-	    $(this).toggleClass('recording'); 
+	    jQuery(this).toggleClass('recording'); 
 	}
-    if ($(this).hasClass('recording')) {
+    if (jQuery(this).hasClass('recording')) {
 	    FWRecorder.configure(22, 80, 1, 0);
         FWRecorder.setUseEchoSuppression(true); 
-        $(".progress").css({ width: '0%' });   	
+        jQuery(".progress").css({ width: '0%' });   	
     	setTimeout(function() { FWRecorder.record('audio', 'audio.wav'); }, 1);
 
     } else {
@@ -87,18 +87,18 @@ jQuery(document).on('click', '.record', function ($) {
 });
 
 // animates play button
-jQuery(document).on('click', '.playback', function ($) {
-  if ($(".record").hasClass('recording')) {
+jQuery(document).on('click', '.playback', function () {
+  if (jQuery(".record").hasClass('recording')) {
     FWRecorder.stopRecording();
-    setTimeout(function() { $(".record").removeClass('recording'); }, 5);
+    setTimeout(function() { jQuery(".record").removeClass('recording'); }, 5);
   }
-	$(".progress").css({ width: '0%' });
+	jQuery(".progress").css({ width: '0%' });
 	setTimeout(function() { FWRecorder.playBack('audio'); }, 5);
-	$(".progress").animate({width: '100%'}, window.duration+10, function() {} );
-  setTimeout(function() { $(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
+	jQuery(".progress").animate({width: '100%'}, window.duration+10, function() {} );
+  setTimeout(function() { jQuery(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
 });
 
 // toggles help pop-up text next to recorder buttons
-jQuery(document).on('hover', '.help', function ($) {
-  $(".help-text").toggleClass('display-none'); 
+jQuery(document).on('hover', '.help', function () {
+  jQuery(".help-text").toggleClass('display-none'); 
 });
