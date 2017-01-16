@@ -2,7 +2,7 @@
 // change layout based on amount of Y scroll
 var minimizeTriggerPosition=-1;
 
-jQuery(function moveThings($) {
+function moveThings() {
     // video position is used as reference point
     var vid = document.getElementById('video-frame');
 
@@ -23,38 +23,38 @@ jQuery(function moveThings($) {
         if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
 
         if(pageYOffset>minimizeTriggerPosition-300){
-            $('#video-navigation').addClass('minimized');
-            $('#video-frame').addClass('minimized');
-            $('#video').addClass('minimized');
-            $('.entry-content').addClass('shifted');
+            jQuery('#video-navigation').addClass('minimized');
+            jQuery('#video-frame').addClass('minimized');
+            jQuery('#video').addClass('minimized');
+            jQuery('.entry-content').addClass('shifted');
             vid.style.top=marginTop+'px';
             if(pageYOffset>videoLimit){
                 vid.style.top=(marginTop-pageYOffset+videoLimit)+'px';
             }
         }else{
-            $('#video-navigation').removeClass('minimized');
-            $('#video-frame').removeClass('minimized');
-            $('#video').removeClass('minimized');
-            $('.entry-content').removeClass('shifted');
+            jQuery('#video-navigation').removeClass('minimized');
+            jQuery('#video-frame').removeClass('minimized');
+            jQuery('#video').removeClass('minimized');
+            jQuery('.entry-content').removeClass('shifted');
             vid.style.top=0;
         }
     }else{
         // mobile view is much simpler
         if(pageYOffset>vid.offsetTop){
-            $('.video-navigation-mobile').addClass('minimized');
+            jQuery('.video-navigation-mobile').addClass('minimized');
         }else{
-            $('.video-navigation-mobile').removeClass('minimized');
+            jQuery('.video-navigation-mobile').removeClass('minimized');
         }
 
         // things need to be reset when window shrinks from desktop view to mobile view
-        $('#video-navigation').removeClass('minimized');
-        $('#video-frame').removeClass('minimized');
-        $('#video').removeClass('minimized');
-        $('.entry-content').removeClass('shifted');
+        jQuery('#video-navigation').removeClass('minimized');
+        jQuery('#video-frame').removeClass('minimized');
+        jQuery('#video').removeClass('minimized');
+        jQuery('.entry-content').removeClass('shifted');
         vid.style.top=0;
 
     }
-});
+}
 
 // function snapToExercise() {
 //     var exercises = document.getElementsByClassName("exercise");
