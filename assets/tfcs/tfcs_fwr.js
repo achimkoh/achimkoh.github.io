@@ -28,9 +28,9 @@ jQuery(function () {
         break;
 
       case "permission_panel_closed":
-        FWRecorder.defaultSize();
-        FWRecorder.hide();
+        // FWRecorder.defaultSize();
         FWRecorder.resize(1, 1);
+        FWRecorder.hide();
         break;
 
       case "recording":
