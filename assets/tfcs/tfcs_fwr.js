@@ -4,10 +4,9 @@
 jQuery(function () {
 
   var RECORDER_APP_ID = "recorderApp";
-//  var $level = $('.level .progress');
 
-  var appWidth = 24;
-  var appHeight = 24;
+  var appWidth = 240;
+  var appHeight = 180;
   var flashvars = {'upload_image': 'http://michalstocki.github.io/FlashWavRecorder/html/images/upload.png'};
   var params = { allowScriptAccess: 'always', wmode: 'transparent'};
   var attributes = {'id': RECORDER_APP_ID, 'name': RECORDER_APP_ID};
@@ -30,11 +29,11 @@ jQuery(function () {
 
       case "permission_panel_closed":
         FWRecorder.defaultSize();
+        FWRecorder.hide();
+        FWRecorder.resize(1, 1);
         break;
 
       case "recording":
-        FWRecorder.hide();
-        FWRecorder.resize(1, 1);
         FWRecorder.observeLevel();
         break;
 
@@ -50,7 +49,6 @@ jQuery(function () {
       	var curLevel = jQuery(".audiolevel").height();
         jQuery(".audiolevel").css({height: (arguments[1]*90 + curLevel*10/40) + '%'});
         break;
-
     }
   };
 
@@ -97,8 +95,3 @@ jQuery(document).on('click', '.playback', function () {
 	jQuery(".progress").animate({width: '100%'}, window.duration+10, function() {} );
   setTimeout(function() { jQuery(".progress").animate({width: '0%'}, 10, function() {} ); }, 5);
 });
-
-// toggles help pop-up text next to recorder buttons
-// jQuery(document).on('hover', '.help', function () {
-//   jQuery(".help-text").toggleClass('display-none'); 
-// });

@@ -29,10 +29,6 @@
       if(Recorder.recorder && Recorder.recorder.init) {
         Recorder.recorderOriginalWidth = Recorder.recorder.width;
         Recorder.recorderOriginalHeight = Recorder.recorder.height;
-        // if(Recorder.uploadFormId && $) {
-        //   var frm = $(Recorder.uploadFormId); 
-        //   Recorder.recorder.init(frm.attr('action').toString(), Recorder.uploadFieldName, frm.serializeArray());
-        // }
         return;
       }
 
@@ -123,13 +119,8 @@
       return Recorder.recorder.isMicrophoneAccessible();
     },
 
-    // updateForm: function() {
-    //   var frm = $(Recorder.uploadFormId); 
-    //   Recorder.recorder.update(frm.serializeArray());
-    // },
-
     showPermissionWindow: function(options) {
-      Recorder.resize(240, 160);
+      Recorder.resize(240, 180);
       // need to wait until app is resized before displaying permissions screen
       var permissionCommand = function() {
         // if (options && options.permanent) {
