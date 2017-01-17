@@ -52,9 +52,9 @@ jQuery(function () {
     }
   };
 
-  function recorderEl() {
-    return jQuery('#' + RECORDER_APP_ID);
-  }
+  // function recorderEl() {
+  //   return jQuery('#' + RECORDER_APP_ID);
+  // }
 });
 
 jQuery(document).ready(function(){
