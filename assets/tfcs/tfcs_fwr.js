@@ -1,6 +1,8 @@
 // from https://github.com/michalstocki/FlashWavRecorder/
 // adapted for use in Baruch College's TfCS Wordpress website
 
+jQuery(function () {
+
   var RECORDER_APP_ID = "recorderApp";
 
   var appWidth = 240;
@@ -53,6 +55,7 @@
   function recorderEl() {
     return jQuery('#' + RECORDER_APP_ID);
   }
+});
 
 jQuery(document).ready(function(){
   if (document.getElementById('recorderApp')) {
