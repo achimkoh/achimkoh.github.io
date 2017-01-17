@@ -57,19 +57,17 @@ jQuery(function () {
   }
 });
 
-// fix flash object in a specific position on window. 
-// this way the flash object being resized will not mess with the page layout
 jQuery(document).ready(function(){
-    if (document.getElementById('recorderApp')) {
-      if (FWRecorder.isMicrophoneAccessible()) {
-        FWRecorder.resize(1, 1);
-      } else {
-        FWRecorder.showPermissionWindow();
-      }
+  if (document.getElementById('recorderApp')) {
+    if (FWRecorder.isMicrophoneAccessible()) {
+      FWRecorder.resize(1, 1);
+    } else {
+      FWRecorder.showPermissionWindow();
     }
+  }
 });
 
-// pressing the record button first asks permission and triggers recording
+// pressing the record button first asks permission or triggers recording
 jQuery(document).on('click', '.record', function () {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
