@@ -61,8 +61,11 @@ jQuery(function () {
 // this way the flash object being resized will not mess with the page layout
 jQuery(document).ready(function(){
     if (document.getElementById('recorderApp')) {
-        var flashobject = document.getElementById('recorderApp');
-        flashobject.style.position = "fixed";        
+      if (FWRecorder.isMicrophoneAccessible()) {
+        FWRecorder.resize(1, 1);
+      } else {
+        FWRecorder.showPermissionWindow();
+      }
     }
 });
 
