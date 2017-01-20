@@ -81,6 +81,7 @@ function findPosY(obj) {
 // add current page's title (which should be the phoneme) to navigation menu
 jQuery(document).ready(function($) {
     $('#phoneme').html(document.title);
+    $("div#video-phoneme-explanation").html($("div#phoneme-explanation").html())
     $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())
     $('a[href$="#in-sentences"]').html(document.title + ' ' + $('a[href$="#in-sentences"]').html())
     // $(".help-text").toggleClass('display-none');
