@@ -40,7 +40,7 @@ function moveThings() {
         }
     }else{
         // mobile view is much simpler
-        if(pageYOffset>vid.offsetTop){
+        if(pageYOffset>document.getElementsByClassName("exercise")[0].offsetTop){
             jQuery('.video-navigation-mobile').addClass('minimized');
         }else{
             jQuery('.video-navigation-mobile').removeClass('minimized');
