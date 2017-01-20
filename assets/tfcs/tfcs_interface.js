@@ -52,7 +52,6 @@ function moveThings() {
         jQuery('#video').removeClass('minimized');
         jQuery('.entry-content').removeClass('shifted');
         vid.style.top=0;
-
     }
 }
 
@@ -80,30 +79,10 @@ function findPosY(obj) {
 
 // add current page's title (which should be the phoneme) to navigation menu
 jQuery(document).ready(function($) {
-    $('#phoneme').html(document.title);
+    $('.current-phoneme').html(document.title);
+    // $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())
+    // $('a[href$="#in-sentences"]').html(document.title + ' ' + $('a[href$="#in-sentences"]').html())
     $("div#video-phoneme-explanation").html($("div#phoneme-explanation").html())
-    $('a[href$="#in-words"]').html(document.title + ' ' + $('a[href$="#in-words"]').html())
-    $('a[href$="#in-sentences"]').html(document.title + ' ' + $('a[href$="#in-sentences"]').html())
-    // $(".help-text").toggleClass('display-none');
-    // setTimeout(function() {
-    //     $(".help-text").toggleClass('display-none');
-    // }, 2000);
-
-    $('.playback-slow').on('click', function(e) {
-        document.getElementById('video').playbackRate = 0.5;
-        document.getElementById('video').play();
-        $('.playback-slow').css("font-weight", "bold")
-        $('.playback-normal').css("font-weight", "normal")
-        return false;
-    });
-    $('.playback-normal').on('click', function() {
-        document.getElementById('video').playbackRate = 1;
-        document.getElementById('video').play();
-        $('.playback-slow').css("font-weight", "normal")
-        $('.playback-normal').css("font-weight", "bold")
-        return false;
-    });
-    $('.playback-normal').css("font-weight", "bold")
 
     $('.trigger-hover').on('click mouseover', function() {
         $('button.recorder').css("background-color", "#ffc438");
