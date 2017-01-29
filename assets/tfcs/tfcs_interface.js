@@ -46,12 +46,20 @@ function moveThings() {
             jQuery('.video-navigation-mobile').removeClass('minimized');
         }
 
+        if(pageYOffset>minimizeTriggerPosition-300){
+            jQuery('#video').addClass('minimized');
+        } else {
+            jQuery('#video').removeClass('minimized');
+        }
+
+
+
         // things need to be reset when window shrinks from desktop view to mobile view
-        jQuery('#video-navigation').removeClass('minimized');
-        jQuery('#video-frame').removeClass('minimized');
-        jQuery('#video').removeClass('minimized');
-        jQuery('.entry-content').removeClass('shifted');
-        vid.style.top=0;
+        // jQuery('#video-navigation').removeClass('minimized');
+        // jQuery('#video-frame').removeClass('minimized');
+        // jQuery('#video').removeClass('minimized');
+        // jQuery('.entry-content').removeClass('shifted');
+        // vid.style.top=0;
     }
 }
 
