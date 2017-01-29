@@ -40,7 +40,7 @@ function moveThings() {
         }
     }else{
         // mobile view is much simpler
-        if(pageYOffset>document.getElementsByClassName("exercise")[0].offsetTop){
+        if(pageYOffset>document.getElementsByClassName("exercise")[0].offsetTop && pageYOffset<document.getElementsByClassName("phoneme-grid")[0].offsetTop){
             jQuery('.video-navigation-mobile').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
