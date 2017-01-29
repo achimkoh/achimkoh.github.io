@@ -4,23 +4,23 @@ var minimizeTriggerPosition=-1;
 
 function moveThings() {
     // video position is used as reference point
-    var vid = document.getElementById('video-frame');
+    // var vid = document.getElementById('video-frame');
 
     // desktop view involves moving around lots of things
     if(window.innerWidth > 960) {
-        var minimizeTrigger = document.getElementById('phoneme-explanation');
-        var videoLimitElement = document.getElementById('whats-next');
-        var videoLimit = findPosY(videoLimitElement) - 700;
+        // var minimizeTrigger = document.getElementById('phoneme-explanation');
+        // var videoLimitElement = document.getElementById('whats-next');
+        // var videoLimit = findPosY(videoLimitElement) - 700;
 
-        // adjust top margin to TfCS header position (header stops being fixed at 1242px)
-        var marginTop;
-        if(window.innerWidth > 1242){
-            marginTop = 125;
-        }else{
-            marginTop = 75;
-        }
+        // // adjust top margin to TfCS header position (header stops being fixed at 1242px)
+        // var marginTop;
+        // if(window.innerWidth > 1242){
+        //     marginTop = 125;
+        // }else{
+        //     marginTop = 75;
+        // }
 
-        if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
+        // if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
 
         if(pageYOffset>minimizeTriggerPosition-300){
             jQuery('#video-navigation').addClass('minimized');
@@ -40,7 +40,7 @@ function moveThings() {
         }
     }else{
         // mobile view is much simpler
-        if(pageYOffset>document.getElementsByClassName("exercise")[0].offsetTop && pageYOffset<document.getElementsByClassName("phoneme-grid")[0].offsetTop){
+        if(pageYOffset>exercisePosition && pageYOffset<phonemeGridPosition){
             jQuery('.video-navigation-mobile').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
@@ -114,5 +114,24 @@ jQuery(document).ready(function($) {
             window.location.hash = target;
         });
     });
+
+    // calculate anchor positions
+    var vid = document.getElementById('video-frame');
+    var minimizeTrigger = document.getElementById('phoneme-explanation');
+    var videoLimitElement = document.getElementById('whats-next');
+    var videoLimit = findPosY(videoLimitElement) - 700;
+
+    // adjust top margin to TfCS header position (header stops being fixed at 1242px)
+    var marginTop;
+    if(window.innerWidth > 1242){
+        marginTop = 125;
+    }else{
+        marginTop = 75;
+    }
+    if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
+
+    var exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
+    var phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
+
 });
 
