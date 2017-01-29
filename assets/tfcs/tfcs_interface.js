@@ -1,3 +1,5 @@
+var minimizeTriggerPosition=-1;
+
 function moveThings() {
     // video position is used as reference point
     // var vid = document.getElementById('video-frame');
@@ -18,7 +20,7 @@ function moveThings() {
 
         // if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
 
-        if(pageYOffset>window.minimizeTriggerPosition-300){
+        if(pageYOffset>minimizeTriggerPosition-300){
             jQuery('#video-navigation').addClass('minimized');
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
@@ -114,7 +116,6 @@ jQuery(document).ready(function($) {
     // calculate anchor positions
     // adapted from Jim W's code: http://stackoverflow.com/a/17494943
     // change layout based on amount of Y scroll
-    var window.minimizeTriggerPosition=-1;
     var window.vid = document.getElementById('video-frame');
     var window.minimizeTrigger = document.getElementById('phoneme-explanation');
     var window.videoLimitElement = document.getElementById('whats-next');
@@ -127,7 +128,7 @@ jQuery(document).ready(function($) {
     }else{
         window.marginTop = 75;
     }
-    if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
+    if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
     var window.exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
     var window.phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
