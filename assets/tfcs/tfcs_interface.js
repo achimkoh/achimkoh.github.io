@@ -1,7 +1,3 @@
-// adapted from Jim W's code: http://stackoverflow.com/a/17494943
-// change layout based on amount of Y scroll
-var minimizeTriggerPosition=-1;
-
 function moveThings() {
     // video position is used as reference point
     // var vid = document.getElementById('video-frame');
@@ -22,25 +18,25 @@ function moveThings() {
 
         // if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
 
-        if(pageYOffset>minimizeTriggerPosition-300){
+        if(pageYOffset>window.minimizeTriggerPosition-300){
             jQuery('#video-navigation').addClass('minimized');
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
             jQuery('.entry-content').addClass('shifted');
-            vid.style.top=marginTop+'px';
-            if(pageYOffset>videoLimit){
-                vid.style.top=(marginTop-pageYOffset+videoLimit)+'px';
+            window.vid.style.top=window.marginTop+'px';
+            if(pageYOffset>window.videoLimit){
+                window.vid.style.top=(window.marginTop-pageYOffset+window.videoLimit)+'px';
             }
         }else{
             jQuery('#video-navigation').removeClass('minimized');
             jQuery('#video-frame').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
             jQuery('.entry-content').removeClass('shifted');
-            vid.style.top=0;
+            window.vid.style.top=0;
         }
     }else{
         // mobile view is much simpler
-        if(pageYOffset>exercisePosition && pageYOffset<phonemeGridPosition){
+        if(pageYOffset>window.exercisePosition && pageYOffset<window.phonemeGridPosition){
             jQuery('.video-navigation-mobile').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
@@ -116,22 +112,25 @@ jQuery(document).ready(function($) {
     });
 
     // calculate anchor positions
-    var vid = document.getElementById('video-frame');
-    var minimizeTrigger = document.getElementById('phoneme-explanation');
-    var videoLimitElement = document.getElementById('whats-next');
-    var videoLimit = findPosY(videoLimitElement) - 700;
+    // adapted from Jim W's code: http://stackoverflow.com/a/17494943
+    // change layout based on amount of Y scroll
+    var window.minimizeTriggerPosition=-1;
+    var window.vid = document.getElementById('video-frame');
+    var window.minimizeTrigger = document.getElementById('phoneme-explanation');
+    var window.videoLimitElement = document.getElementById('whats-next');
+    var window.videoLimit = findPosY(window.videoLimitElement) - 700;
 
     // adjust top margin to TfCS header position (header stops being fixed at 1242px)
-    var marginTop;
+    var window.marginTop;
     if(window.innerWidth > 1242){
-        marginTop = 125;
+        window.marginTop = 125;
     }else{
-        marginTop = 75;
+        window.marginTop = 75;
     }
-    if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
+    if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    var exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
-    var phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
+    var window.exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
+    var window.phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
 });
 
