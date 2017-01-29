@@ -132,8 +132,8 @@ jQuery(document).ready(function($) {
     window.exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
     window.phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
-    // fix video-frame height, so that elements stay in position when video is minimized
-    document.getElementById('video-frame').style.height = document.getElementById('video').offsetHeight;
+    // on mobile: fix video-frame height, so that elements stay in position when video is minimized
+    if(jQuery.browser.mobile){document.getElementById('video-frame').style.height = document.getElementById('video').offsetHeight;}
 
 });
 
