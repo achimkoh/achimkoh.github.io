@@ -54,7 +54,7 @@
     	try {
     		// Fix up for prefixing
     		window.AudioContext = window.AudioContext||window.webkitAudioContext;
-    		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     		window.URL = window.URL || window.webkitURL;
     		if(navigator.getUserMedia === false){
           alert('getUserMedia() is not supported in your browser');
