@@ -42,15 +42,12 @@ function moveThings() {
         // mobile view is much simpler
         if(pageYOffset>document.getElementsByClassName("exercise")[0].offsetTop){
             jQuery('.video-navigation-mobile').addClass('minimized');
+            jQuery('#video').addClass('minimized');
         }else{
             jQuery('.video-navigation-mobile').removeClass('minimized');
-        }
-
-        if(pageYOffset>minimizeTriggerPosition-300){
-            jQuery('#video').addClass('minimized');
-        } else {
             jQuery('#video').removeClass('minimized');
         }
+
 
 
 
