@@ -48,9 +48,6 @@ function moveThings() {
             jQuery('#video').removeClass('minimized');
         }
 
-
-
-
         // things need to be reset when window shrinks from desktop view to mobile view
         // jQuery('#video-navigation').removeClass('minimized');
         // jQuery('#video-frame').removeClass('minimized');
