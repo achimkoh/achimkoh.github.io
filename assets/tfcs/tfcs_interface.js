@@ -129,7 +129,7 @@ jQuery(document).ready(function($) {
     }
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + (window.innerWidth * .75);
+    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
     // on mobile: fix video-frame height, so that elements stay in position when video is minimized
