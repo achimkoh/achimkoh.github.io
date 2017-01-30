@@ -36,7 +36,7 @@ function moveThings() {
         }
     }else{
         // mobile view is much simpler
-        if(pageYOffset>window.exercisePosition && pageYOffset<window.phonemeGridPosition){
+        if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
             jQuery('.video-navigation-mobile').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
@@ -129,8 +129,8 @@ jQuery(document).ready(function($) {
     }
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    window.exercisePosition = document.getElementsByClassName("exercise")[0].offsetTop;
-    window.phonemeGridPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
+    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop;
+    window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
     // on mobile: fix video-frame height, so that elements stay in position when video is minimized
     if(window.innerWidth <= 960){$('#video-frame').css("height", document.getElementById('video').offsetHeight * 1.45);}
