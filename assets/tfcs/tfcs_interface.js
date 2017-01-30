@@ -137,6 +137,6 @@ jQuery(document).ready(function($) {
 
     // if iOS, do not use custom play button, because native button is not hidden despite video settings
     if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-        $(".vjs-big-play-button").css("display", "none");
+        $(".vjs-big-play-button").css("display", "none !important");
     }
 });
