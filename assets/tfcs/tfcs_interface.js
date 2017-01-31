@@ -6,9 +6,7 @@ function moveThings() {
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
             jQuery('.entry-content').addClass('shifted');
-            // window.vid.style.top=window.marginTop+'px';
-            if(pageYOffset>window.videoLimit){
-                // window.vid.style.top=(window.marginTop-pageYOffset+window.videoLimit)+'px';
+            if(pageYOffset>window.videoHiddenTrigger){
                 jQuery('#video-frame').addClass('hidden');
             }else{
                 jQuery('#video-frame').removeClass('hidden');
@@ -18,10 +16,9 @@ function moveThings() {
             jQuery('#video-frame').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
             jQuery('.entry-content').removeClass('shifted');
-            // window.vid.style.top=0;
         }
     }else{
-        // mobile view is much simpler
+        // mobile view is simpler
         if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
             jQuery('.video-navigation-mobile').addClass('minimized');
             jQuery('#video').addClass('minimized');
@@ -29,7 +26,6 @@ function moveThings() {
             jQuery('.video-navigation-mobile').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
         }
-
         // things need to be reset when window shrinks from desktop view to mobile view
         jQuery('#video-navigation').removeClass('minimized');
         jQuery('#video-frame').removeClass('minimized');
@@ -102,8 +98,7 @@ jQuery(document).ready(function($) {
     // video position is used as reference point
     window.vid = document.getElementById('video-frame');
     window.minimizeTrigger = document.getElementById('phoneme-explanation');
-    window.videoLimitElement = document.getElementById('whats-next');
-    window.videoLimit = findPosY(window.videoLimitElement) - 700;
+    window.videoHiddenTrigger = findPosY(document.getElementById('whats-next'));
 
     // adjust top margin to TfCS header position (header stops being fixed at 1242px)
     window.marginTop;
