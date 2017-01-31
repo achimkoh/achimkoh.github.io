@@ -6,16 +6,19 @@ function moveThings() {
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
             jQuery('.entry-content').addClass('shifted');
-            window.vid.style.top=window.marginTop+'px';
+            // window.vid.style.top=window.marginTop+'px';
             if(pageYOffset>window.videoLimit){
-                window.vid.style.top=(window.marginTop-pageYOffset+window.videoLimit)+'px';
+                // window.vid.style.top=(window.marginTop-pageYOffset+window.videoLimit)+'px';
+                jQuery('#video-frame').addClass('hidden');
+            }else{
+                jQuery('#video-frame').removeClass('hidden');
             }
         }else{
             jQuery('#video-navigation').removeClass('minimized');
             jQuery('#video-frame').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
             jQuery('.entry-content').removeClass('shifted');
-            window.vid.style.top=0;
+            // window.vid.style.top=0;
         }
     }else{
         // mobile view is much simpler
