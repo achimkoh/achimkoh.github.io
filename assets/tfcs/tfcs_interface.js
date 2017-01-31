@@ -1,23 +1,6 @@
 function moveThings() {
-    // video position is used as reference point
-    // var vid = document.getElementById('video-frame');
-
-    // desktop view involves moving around lots of things
+    // stuff below move around in desktop view, as user scrolls down
     if(window.innerWidth > 960) {
-        // var minimizeTrigger = document.getElementById('phoneme-explanation');
-        // var videoLimitElement = document.getElementById('whats-next');
-        // var videoLimit = findPosY(videoLimitElement) - 700;
-
-        // // adjust top margin to TfCS header position (header stops being fixed at 1242px)
-        // var marginTop;
-        // if(window.innerWidth > 1242){
-        //     marginTop = 125;
-        // }else{
-        //     marginTop = 75;
-        // }
-
-        // if(minimizeTriggerPosition<0)minimizeTriggerPosition=findPosY(minimizeTrigger);
-
         if(pageYOffset>window.minimizeTriggerPosition-300){
             jQuery('#video-navigation').addClass('minimized');
             jQuery('#video-frame').addClass('minimized');
@@ -45,11 +28,9 @@ function moveThings() {
         }
 
         // things need to be reset when window shrinks from desktop view to mobile view
-        // jQuery('#video-navigation').removeClass('minimized');
-        // jQuery('#video-frame').removeClass('minimized');
-        // jQuery('#video').removeClass('minimized');
-        // jQuery('.entry-content').removeClass('shifted');
-        // vid.style.top=0;
+        jQuery('#video-navigation').removeClass('minimized');
+        jQuery('#video-frame').removeClass('minimized');
+        jQuery('.entry-content').removeClass('shifted');
     }
 }
 
@@ -115,6 +96,7 @@ jQuery(document).ready(function($) {
     // adapted from Jim W's code: http://stackoverflow.com/a/17494943
     // change layout based on amount of Y scroll
     window.minimizeTriggerPosition=-1;
+    // video position is used as reference point
     window.vid = document.getElementById('video-frame');
     window.minimizeTrigger = document.getElementById('phoneme-explanation');
     window.videoLimitElement = document.getElementById('whats-next');
