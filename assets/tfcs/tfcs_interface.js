@@ -66,7 +66,7 @@ function findPosY(obj) {
 // add current page's title (which should be the phoneme) to navigation menu
 jQuery(document).ready(function($) {
     $('.current-phoneme').html(document.title);
-    $("div#video-phoneme-explanation").html($("div#phoneme-explanation").html())
+    $("div#video-phoneme-explanation").html($("div#phoneme-explanation").html());
 
     $('.trigger-hover').on('click mouseover', function() {
         $('button.recorder').css("background-color", "#ffc438");
@@ -120,9 +120,11 @@ jQuery(document).ready(function($) {
         $(".vjs-big-play-button").css("display", "none !important");
     }
 
-    // if mobile browser: hide recorder buttons
+    // if mobile browser: hide recorder buttons and related text
     if(window.browser.mobile){
         $("span.recorder").addClass("display-none");
         $("div#flashcontent").addClass("display-none");
+    }else{
+        $("span#top-buttons").html($("span.recorder").html());
     }
 });
