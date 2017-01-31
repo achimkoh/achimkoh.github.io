@@ -100,13 +100,6 @@ jQuery(document).ready(function($) {
     window.minimizeTrigger = document.getElementById('phoneme-explanation');
     window.videoHiddenTrigger = findPosY(document.getElementById('whats-next'));
 
-    // adjust top margin to TfCS header position (header stops being fixed at 1242px)
-    window.marginTop;
-    if(window.innerWidth > 1242){
-        window.marginTop = 125;
-    }else{
-        window.marginTop = 75;
-    }
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
     window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
@@ -124,6 +117,7 @@ jQuery(document).ready(function($) {
     if(jQuery.browser.mobile){
         $("span.recorder").addClass("display-none");
         $("div#flashcontent").addClass("display-none");
+        $(".vjs-big-play-button").css("display", "none !important");
     }else{
         $("span#top-buttons").html($("span.recorder").html());
     }
