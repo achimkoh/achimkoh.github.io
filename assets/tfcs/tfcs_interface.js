@@ -105,9 +105,6 @@ jQuery(document).ready(function($) {
     window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
-    // on mobile view: fix video-frame height, so that elements stay in position when video is minimized
-    if(window.innerWidth <= 960){$('#video-frame').css("height", document.getElementById('video').offsetHeight * 1.45);}
-
     // if iOS: do not use custom play button, because native button is not hidden despite video settings
     // if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
     //     $(".vjs-big-play-button").css("display", "none !important");
@@ -115,9 +112,12 @@ jQuery(document).ready(function($) {
 
     // if mobile browser: hide recorder buttons and related text
     if(jQuery.browser.mobile){
+        $("span.recorder").html($("span#top").html());
         $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
-        $("span.recorder").html($("span#top").html());
-    }else{
     }
+
+    // on mobile view: fix container height, so that elements stay in position when video is minimized
+    if(window.innerWidth <= 960){$('#container').css("height", document.getElementById('container').offsetHeight * 1.45);}
+
 });
