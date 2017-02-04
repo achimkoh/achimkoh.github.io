@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
     if(window.innerWidth <= 960){
-        $('#phoneme-container').css("height", document.getElementById('video').offsetHeight + document.getElementById('video-navigation').offsetHeight);        
+        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById('video-navigation').offsetHeight);        
         $('#container').css("height", document.getElementById('container').offsetHeight);
     }
 
