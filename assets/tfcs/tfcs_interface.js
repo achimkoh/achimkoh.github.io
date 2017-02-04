@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
         $('#video-frame').css("height", window.innerWidth*0.725);
         $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
     }
-    
+
     // on mobile view: fix container height, so that elements stay in position when video is minimized
     // calculate anchor positions
 
@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
 
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
+    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
 });
