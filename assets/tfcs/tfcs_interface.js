@@ -31,8 +31,6 @@ function moveThings() {
         jQuery('#video-frame').removeClass('minimized');
         jQuery('.entry-content').removeClass('shifted');
         jQuery('#video-frame').css("height", window.innerWidth*0.725);
-        jQuery('#container').css("height", document.getElementById('container').offsetHeight);
-
     }
 }
 
