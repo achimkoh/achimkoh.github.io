@@ -117,8 +117,7 @@ jQuery(document).ready(function($) {
     if(jQuery.browser.mobile){
         $("span.recorder").addClass("display-none");
         $("div#flashcontent").addClass("display-none");
-        $("div#video-navigation").addClass("mobile");
     }else{
-        $("span#top-buttons").html($("span.recorder").html());
+        $("span.recorder").html($("span#top").html());
     }
 });
