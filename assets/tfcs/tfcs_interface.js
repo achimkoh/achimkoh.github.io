@@ -91,20 +91,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // calculate anchor positions
-    // adapted from Jim W's code: http://stackoverflow.com/a/17494943
-    // change layout based on amount of Y scroll
-    window.minimizeTriggerPosition=-1;
-    // video position is used as reference point
-    window.vid = document.getElementById('video-frame');
-    window.minimizeTrigger = document.getElementById('phoneme-explanation');
-    window.videoHiddenTrigger = findPosY(document.getElementById('whats-next'));
-
-    if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
-
-    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
-    window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
-
     // if iOS: do not use custom play button, because native button is not hidden despite video settings
     // if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
     //     $(".vjs-big-play-button").css("display", "none !important");
@@ -118,6 +104,23 @@ jQuery(document).ready(function($) {
     }
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
-    if(window.innerWidth <= 960){$('#container').css("height", document.getElementById('container').offsetHeight);}
+    if(window.innerWidth <= 960){
+        $('#video-frame').css("height", document.getElementById('video').offsetHeight);        
+        $('#container').css("height", document.getElementById('container').offsetHeight);
+    }
+
+    // calculate anchor positions
+    // adapted from Jim W's code: http://stackoverflow.com/a/17494943
+    // change layout based on amount of Y scroll
+    window.minimizeTriggerPosition=-1;
+    // video position is used as reference point
+    window.vid = document.getElementById('video-frame');
+    window.minimizeTrigger = document.getElementById('phoneme-explanation');
+    window.videoHiddenTrigger = findPosY(document.getElementById('whats-next'));
+
+    if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
+
+    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
+    window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
 });
