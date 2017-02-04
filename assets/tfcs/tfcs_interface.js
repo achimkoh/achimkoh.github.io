@@ -20,10 +20,10 @@ function moveThings() {
     }else{
         // mobile view is simpler
         if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
-            jQuery('.video-navigation-mobile').addClass('minimized');
+            jQuery('#video-navigation').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
-            jQuery('.video-navigation-mobile').removeClass('minimized');
+            jQuery('#video-navigation').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
         }
         // things need to be reset when window shrinks from desktop view to mobile view
@@ -109,15 +109,14 @@ jQuery(document).ready(function($) {
     if(window.innerWidth <= 960){$('#video-frame').css("height", document.getElementById('video').offsetHeight * 1.45);}
 
     // if iOS: do not use custom play button, because native button is not hidden despite video settings
-    if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-        $(".vjs-big-play-button").css("display", "none !important");
-    }
+    // if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    //     $(".vjs-big-play-button").css("display", "none !important");
+    // }
 
     // if mobile browser: hide recorder buttons and related text
     if(jQuery.browser.mobile){
         $("span.recorder").addClass("display-none");
         $("div#flashcontent").addClass("display-none");
-        $(".vjs-big-play-button").css("display", "none !important");
     }else{
         $("span#top-buttons").html($("span.recorder").html());
     }
