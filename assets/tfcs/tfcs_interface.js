@@ -118,6 +118,6 @@ jQuery(document).ready(function($) {
     }
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
-    if(window.innerWidth <= 960){$('#container').css("height", document.getElementById('container').offsetHeight * 1.45);}
+    if(window.innerWidth <= 960){$('#container').css("height", document.getElementById('container').offsetHeight);}
 
 });
