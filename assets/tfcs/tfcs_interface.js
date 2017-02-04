@@ -27,7 +27,7 @@ function moveThings() {
             jQuery('#video').removeClass('minimized');
         }
         // things need to be reset when window shrinks from desktop view to mobile view
-        jQuery('#video-navigation').removeClass('minimized');
+        // jQuery('#video-navigation').removeClass('minimized');
         jQuery('#video-frame').removeClass('minimized');
         jQuery('.entry-content').removeClass('shifted');
     }
@@ -117,6 +117,7 @@ jQuery(document).ready(function($) {
     if(jQuery.browser.mobile){
         $("span.recorder").addClass("display-none");
         $("div#flashcontent").addClass("display-none");
+        $("div#video-navigation").addClass("mobile");
     }else{
         $("span#top-buttons").html($("span.recorder").html());
     }
