@@ -39,6 +39,9 @@ window.onresize=function(){
     if(window.innerWidth <= 960){
         jQuery('#video-frame').css("height", window.innerWidth*0.725);
         jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+    } else {
+        jQuery('#video-frame').css("height", "");        
+        jQuery('#phoneme-container').css("height", "");        
     }
     moveThings();
 };
