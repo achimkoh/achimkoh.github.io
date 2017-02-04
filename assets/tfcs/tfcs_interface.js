@@ -115,7 +115,7 @@ jQuery(document).ready(function($) {
 
     // if mobile browser: hide recorder buttons and related text
     if(jQuery.browser.mobile){
-        $("span.recorder").addClass("display-none");
+        $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
         $("span.recorder").html($("span#top").html());
     }else{
