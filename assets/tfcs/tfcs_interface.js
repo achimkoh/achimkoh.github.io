@@ -36,7 +36,7 @@ window.onscroll=function(){
 
 window.onresize=function(){
     moveThings();
-    if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
+    if(window.innerWidth <= 960){
         jQuery('#video-frame').removeClass('minimized');
         jQuery('.entry-content').removeClass('shifted');
         jQuery('#video-frame').css("height", window.innerWidth*0.725);
