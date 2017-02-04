@@ -101,6 +101,7 @@ jQuery(document).ready(function($) {
         $("span.recorder").html($("span#top").html());
         $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
+        $("#video-navigation").css("height", "11em");
     }
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
