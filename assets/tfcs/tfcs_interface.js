@@ -1,12 +1,12 @@
 function moveThings() {
     // stuff below move around in desktop view, as user scrolls down
     if(window.innerWidth > 960) {
-        if(pageYOffset>window.minimizeTriggerPosition-300){
+        if(window.pageYOffset>window.minimizeTriggerPosition-300){
             jQuery('#video-navigation').addClass('minimized');
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
             jQuery('.entry-content').addClass('shifted');
-            if(pageYOffset>window.videoHiddenTrigger){
+            if(window.pageYOffset>window.videoHiddenTrigger){
                 jQuery('#video-frame').addClass('hidden');
             }else{
                 jQuery('#video-frame').removeClass('hidden');
@@ -19,13 +19,15 @@ function moveThings() {
         }
     }else{
         // mobile view is simpler
-        if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
+        if(window.pageYOffset>window.mobileVideoMinimizePosition && window.pageYOffset<window.mobileVideoMinimizeEndPosition){
             jQuery('#video-navigation').addClass('minimized');
             jQuery('#video').addClass('minimized');
         }else{
             jQuery('#video-navigation').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
         }
+        jQuery('#video-frame').removeClass('minimized');
+        jQuery('.entry-content').removeClass('shifted');
     }
 }
 
@@ -34,14 +36,11 @@ window.onscroll=function(){
 };
 
 window.onresize=function(){
-    moveThings();
     if(window.innerWidth <= 960){
-        jQuery('#video-frame').removeClass('minimized');
-        jQuery('.entry-content').removeClass('shifted');
         jQuery('#video-frame').css("height", window.innerWidth*0.725);
         jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
     }
-
+    moveThings();
 };
 
 function findPosY(obj) {
@@ -111,7 +110,7 @@ jQuery(document).ready(function($) {
         $('#video-frame').css("height", window.innerWidth*0.725);
         $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
     }
-    
+
     // on mobile view: fix container height, so that elements stay in position when video is minimized
     // calculate anchor positions
 
