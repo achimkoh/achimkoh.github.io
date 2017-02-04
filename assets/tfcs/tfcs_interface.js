@@ -101,12 +101,12 @@ jQuery(document).ready(function($) {
         $("span.recorder").html($("span#top").html());
         $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
-        $("#video-navigation").css("height", "11em");
+        $("#video-navigation").addClass("mobile");
     }
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
     if(window.innerWidth <= 960){
-        $('#video-frame').css("height", document.getElementById('video').offsetHeight);        
+        $('#phoneme-container').css("height", document.getElementById('video').offsetHeight + document.getElementById('video-navigation').offsetHeight);        
         $('#container').css("height", document.getElementById('container').offsetHeight);
     }
 
