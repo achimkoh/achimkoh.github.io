@@ -6,7 +6,7 @@ function moveThings() {
             jQuery('#video-frame').addClass('minimized');
             jQuery('#video').addClass('minimized');
             jQuery('.entry-content').addClass('shifted');
-            if(window.pageYOffset>window.videoHiddenTrigger){
+            if(window.pageYOffset>window.videoHiddenTriggerPosition){
                 jQuery('#video-frame').addClass('hidden');
             }else{
                 jQuery('#video-frame').removeClass('hidden');
@@ -111,20 +111,16 @@ jQuery(document).ready(function($) {
         $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
     }
 
-    // on mobile view: fix container height, so that elements stay in position when video is minimized
-    // calculate anchor positions
-
     // adapted from Jim W's code: http://stackoverflow.com/a/17494943
     // change layout based on amount of Y scroll
     window.minimizeTriggerPosition=-1;
-    // video position is used as reference point
-    window.vid = document.getElementById('video-frame');
+    // window.vid = document.getElementById('video-frame');
     window.minimizeTrigger = document.getElementById('phoneme-explanation');
-    window.videoHiddenTrigger = findPosY(document.getElementById('whats-next'));
+    window.videoHiddenTriggerPosition = findPosY(document.getElementById('whats-next'));
 
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
-    window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
+    window.mobileVideoMinimizePosition = findPosY(document.getElementById("phoneme-explanation")) + window.innerWidth;
+    window.mobileVideoMinimizeEndPosition = findPosY(document.getElementsByClassName("phoneme-grid")[0]);
 
 });
