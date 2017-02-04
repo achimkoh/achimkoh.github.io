@@ -26,7 +26,6 @@ function moveThings() {
             jQuery('#video-navigation').removeClass('minimized');
             jQuery('#video').removeClass('minimized');
         }
-        // things need to be reset when window shrinks from desktop view to mobile view
     }
 }
 
@@ -108,6 +107,11 @@ jQuery(document).ready(function($) {
         $("#video-navigation").addClass("mobile");
     }
 
+    if(window.innerWidth <= 960){
+        $('#video-frame').css("height", window.innerWidth*0.725);
+        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+    }
+    
     // on mobile view: fix container height, so that elements stay in position when video is minimized
     // calculate anchor positions
 
@@ -123,10 +127,5 @@ jQuery(document).ready(function($) {
 
     window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
-
-    if(window.innerWidth <= 960){
-        $('#video-frame').css("height", window.innerWidth*0.725);
-        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
-    }
 
 });
