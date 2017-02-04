@@ -30,6 +30,9 @@ function moveThings() {
         // jQuery('#video-navigation').removeClass('minimized');
         jQuery('#video-frame').removeClass('minimized');
         jQuery('.entry-content').removeClass('shifted');
+        jQuery('#video-frame').css("height", window.innerWidth*0.725);
+        jQuery('#container').css("height", document.getElementById('container').offsetHeight);
+
     }
 }
 
@@ -105,12 +108,8 @@ jQuery(document).ready(function($) {
     }
 
     // on mobile view: fix container height, so that elements stay in position when video is minimized
-    if(window.innerWidth <= 960){
-        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById('video-navigation').offsetHeight);        
-        $('#container').css("height", document.getElementById('container').offsetHeight);
-    }
-
     // calculate anchor positions
+
     // adapted from Jim W's code: http://stackoverflow.com/a/17494943
     // change layout based on amount of Y scroll
     window.minimizeTriggerPosition=-1;
