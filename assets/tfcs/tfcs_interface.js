@@ -27,10 +27,6 @@ function moveThings() {
             jQuery('#video').removeClass('minimized');
         }
         // things need to be reset when window shrinks from desktop view to mobile view
-        jQuery('#video-frame').removeClass('minimized');
-        jQuery('.entry-content').removeClass('shifted');
-        jQuery('#video-frame').css("height", window.innerWidth*0.725);
-        jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
     }
 }
 
@@ -40,6 +36,13 @@ window.onscroll=function(){
 
 window.onresize=function(){
     moveThings();
+    if(pageYOffset>window.mobileVideoMinimizePosition && pageYOffset<window.mobileVideoMinimizeEndPosition){
+        jQuery('#video-frame').removeClass('minimized');
+        jQuery('.entry-content').removeClass('shifted');
+        jQuery('#video-frame').css("height", window.innerWidth*0.725);
+        jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+    }
+
 };
 
 function findPosY(obj) {
@@ -120,5 +123,9 @@ jQuery(document).ready(function($) {
 
     window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
+
+    $('#video-frame').css("height", window.innerWidth*0.725);
+    $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+
 
 });
