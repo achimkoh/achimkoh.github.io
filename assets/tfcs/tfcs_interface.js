@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
 
     if(window.minimizeTriggerPosition<0)window.minimizeTriggerPosition=findPosY(window.minimizeTrigger);
 
-    window.mobileVideoMinimizePosition = findPosY(document.getElementById("phoneme-explanation")) + window.innerWidth;
+    window.mobileVideoMinimizePosition = findPosY(document.getElementById("video-frame")) + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = findPosY(document.getElementsByClassName("phoneme-grid")[0]);
 
 });
