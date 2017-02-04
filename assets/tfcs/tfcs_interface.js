@@ -124,8 +124,9 @@ jQuery(document).ready(function($) {
     window.mobileVideoMinimizePosition = document.getElementById("phoneme-explanation").offsetTop + window.innerWidth;
     window.mobileVideoMinimizeEndPosition = document.getElementsByClassName("phoneme-grid")[0].offsetTop;
 
-    $('#video-frame').css("height", window.innerWidth*0.725);
-    $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
-
+    if(window.innerWidth <= 960){
+        $('#video-frame').css("height", window.innerWidth*0.725);
+        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+    }
 
 });
