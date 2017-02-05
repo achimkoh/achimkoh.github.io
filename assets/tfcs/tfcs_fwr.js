@@ -72,7 +72,7 @@ jQuery(document).on('click', '.record', function () {
 	if (!FWRecorder.isMicrophoneAccessible()) {
 		FWRecorder.showPermissionWindow();
 	} else {
-	    jQuery(this).toggleClass('recording'); 
+	    jQuery(".record").toggleClass('recording'); 
 	}
     if (jQuery(this).hasClass('recording')) {
 	    FWRecorder.configure(22, 80, 1, 0);
