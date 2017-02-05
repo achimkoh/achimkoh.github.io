@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
         $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
         $("#video-navigation").addClass("mobile");
-        window.videoNavHeight = 300;
+        window.videoNavHeight = 336;
     }else{window.videoNavHeight = 351;}
 
     if(window.innerWidth <= 960){
