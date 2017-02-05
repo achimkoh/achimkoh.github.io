@@ -37,8 +37,8 @@ window.onscroll=function(){
 
 window.onresize=function(){
     if(window.innerWidth <= 960){
-        jQuery('#video-frame').css("height", window.innerWidth*0.725);
-        jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+        jQuery('#video-frame').css("height", window.innerWidth*0.725 + "px");
+        jQuery('#phoneme-container').css("height", window.innerWidth*0.725 + window.videoNavHeight + "px");
     } else {
         jQuery('#video-frame').css("height", "");        
         jQuery('#phoneme-container').css("height", "");        
@@ -107,11 +107,12 @@ jQuery(document).ready(function($) {
         $("span.recorder").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
         $("#video-navigation").addClass("mobile");
-    }
+        window.videoNavHeight = 300;
+    }else{window.videoNavHeight = 351;}
 
     if(window.innerWidth <= 960){
-        $('#video-frame').css("height", window.innerWidth*0.725);
-        $('#phoneme-container').css("height", window.innerWidth*0.725 + document.getElementById("video-navigation").offsetHeight);
+        $('#video-frame').css("height", window.innerWidth*0.725 + "px");
+        $('#phoneme-container').css("height", window.innerWidth*0.725 + window.videoNavHeight + "px");
     }
 
     // adapted from Jim W's code: http://stackoverflow.com/a/17494943
