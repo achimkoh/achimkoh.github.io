@@ -107,6 +107,7 @@ jQuery(document).ready(function($) {
     if(jQuery.browser.mobile){
         $("span.recorder").html($("span#top").html());
         $("span.recorder").addClass("mobile");
+        $("span.mobile-instruction").addClass("mobile");
         $("div#flashcontent").addClass("display-none");
         $("#video-navigation").addClass("mobile");
         window.videoNavHeight = 336;
