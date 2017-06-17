@@ -13,6 +13,7 @@
  * https://github.com/poole/lanyon.
  */
 
+/* modified by @achimkoh */
 
 /*
  * Contents
@@ -172,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar a {
   font-weight: normal;
   color: #fff;
+  text-decoration: none;
 }
 .sidebar-item {
   padding: 1rem;
@@ -179,6 +181,12 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-item p:last-child {
   margin-bottom: 0;
 }
+.sidebar-item svg {
+  height: 2em;
+}
+.sidebar-item a:hover {
+}
+
 
 /* Sidebar nav */
 .sidebar-nav {
