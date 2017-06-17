@@ -5,13 +5,11 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p><img src='/public/svt.svg'></p>
+    <p><a href="{{ site.baseurl }}/"><img src='/public/svt.svg'></a></p>
     <p>{{ site.description }}</p>
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
-
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
@@ -26,13 +24,12 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="https://github.com/achimkoh">GitHub</a>
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <span class="sidebar-nav-item">meh</span>
   </nav>
 
   <div class="sidebar-item">
     <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+      <a href="https://twitter.com/achimkoh">{% include icon-twitter.svg %}</a><a href="https://github.com/achimkoh">{% include icon-github.svg %}</a>
     </p>
   </div>
 </div>

@@ -2,6 +2,7 @@
 layout: post
 title: Who builds South Korean public websites?
 date: 2016-06-01 10:00:00 -0500
+tags: project
 ---
 
 Work in progress. Based on final project for [Data Visualization Methods, Spring 2016](http://manovich.net/index.php/teaching).

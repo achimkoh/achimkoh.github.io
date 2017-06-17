@@ -4,12 +4,12 @@ gems: [jekyll-paginate]
 # Permalinks
 
 # Setup
-title:               s-v-t
-tagline:             'i am a robot'
-description:         'Projects and stuff by <a href="https://twitter.com/achimkoh" target="_blank">@achimkoh</a>.'
+title:               'scalar vector tensor'
+# tagline:             'machine-made' # this should be a random message
+description:         'Projects and other things by <a href="https://twitter.com/achimkoh" target="_blank">@achimkoh</a>.'
 url:                 https://scalarvectortensor.net # the base hostname & protocol for your site
 baseurl:             '' # the subpath of your site, e.g. /blog
-paginate:            5
+paginate:            1
 permalink:           pretty
 twitter_username: achimkoh
 github_username:  achimkoh
