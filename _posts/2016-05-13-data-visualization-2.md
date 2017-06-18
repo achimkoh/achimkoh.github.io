@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 title:  instagram images by users
-date:   2016-05-12 20:02:00 -0500
-categories: code project
+slug:   datavis-instagram
+date:   2016-05-01 
+tags: 	["project", "data visualization"]
 ---
 <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 

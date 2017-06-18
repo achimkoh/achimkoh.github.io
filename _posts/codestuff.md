@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: code stuff
 permalink: /codestuff/
 featured: true

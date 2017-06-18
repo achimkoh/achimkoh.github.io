@@ -1,18 +1,17 @@
 # Gems
 gems: [jekyll-paginate]
 
-# Permalinks
-
 # Setup
 title:               'scalar vector tensor'
 # tagline:             'machine-made' # this should be a random message
 description:         'Projects and other things by <a href="https://twitter.com/achimkoh" target="_blank">@achimkoh</a>.'
 url:                 https://scalarvectortensor.net # the base hostname & protocol for your site
 baseurl:             '' # the subpath of your site, e.g. /blog
-paginate:            1
+paginate:            5
+paginate_path:       "page:num"
 permalink:           pretty
-twitter_username: achimkoh
-github_username:  achimkoh
+
+
 
 # About/contact
 author:
@@ -20,9 +19,3 @@ author:
   url:               https://twitter.com/achimkoh
   email:             achim.koh@gmail.com
 
-# Custom vars
-version:             1.0.0
-
-# Build settings
-# markdown: kramdown
-# include: ['_pages']
