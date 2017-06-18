@@ -36,7 +36,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Varela+Round');
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url('./SpoqaHanSans-kr.css');
 
 /* Prevent scroll on narrow devices */
 html,
@@ -45,16 +45,25 @@ body {
 }
 
 html {
-  font-family: 'Lato', 'Spoqa Han Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', 'Spoqa Han Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: -.025rem;
 }
 
+h1, h2, h3 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
 
+h4, h5, h6 {
+  font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-weight: 600;
+}
 /*
  * Wrapper
  *
@@ -109,12 +118,54 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
   font-family: 'Varela Round', sans-serif;
 }
 .masthead-title a {
-  color: #505050;
+  animation: colorchange 50s linear infinite; 
+  -webkit-animation: colorchange 50s linear infinite; 
+  -moz-animation: colorchange 50s linear infinite; 
+  -o-animation: colorchange 50s linear infinite; 
 }
+@keyframes colorchange {
+  0%   {color: #505050;}
+  17%  {color: #852525;}
+  33%  {color: #984500;}
+  50%  {color: #a77f03;}
+  67%  {color: #0c8900;}
+  83%  {color: #004b83;}
+  100% {color: #505050;}
+}
+
+@-webkit-keyframes colorchange {
+  0%   {color: #505050;}
+  17%  {color: #852525;}
+  33%  {color: #984500;}
+  50%  {color: #a77f03;}
+  67%  {color: #0c8900;}
+  83%  {color: #004b83;}
+  100% {color: #505050;}
+}
+
+@-moz-keyframes colorchange {
+  0%   {color: #505050;}
+  17%  {color: #852525;}
+  33%  {color: #984500;}
+  50%  {color: #a77f03;}
+  67%  {color: #0c8900;}
+  83%  {color: #004b83;}
+  100% {color: #505050;}
+}
+
+@-o-keyframes colorchange {
+  0%   {color: #505050;}
+  17%  {color: #852525;}
+  33%  {color: #984500;}
+  50%  {color: #a77f03;}
+  67%  {color: #0c8900;}
+  83%  {color: #004b83;}
+  100% {color: #505050;}
+}
+
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;

@@ -5,8 +5,6 @@ slug:   datavis-instagram
 date:   2016-05-01 
 tags: 	["project", "data visualization"]
 ---
-<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-
 <style type="text/css">
 	#container{
 		width:100%;
