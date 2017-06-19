@@ -8,7 +8,7 @@ description:         'Projects and other things by <a href="https://twitter.com/
 url:                 https://scalarvectortensor.net # the base hostname & protocol for your site
 paginate:            3
 paginate_path:       "page:num"
-permalink:           pretty
+permalink:           /:title
 timezone:            America/New_York
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Visualization of van gogh paintings metadata using R
+title:  Data visualization of van gogh paintings metadata using R
 slug:   datavis-vangogh
 date:   2016-05-01 
 tags: 	["project", "data visualization"]

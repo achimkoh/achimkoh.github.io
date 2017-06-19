@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  generating text based on scraped data
+title:  Generating text based on scraped data
 tags: ["project", "machine learning", "text generation", "media studies"]
 ---
 

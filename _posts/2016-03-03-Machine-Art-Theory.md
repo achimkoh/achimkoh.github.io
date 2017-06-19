@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Machine art theory memo
+title:  Machine art theory - memo
 date:   2016-03-03 10:33:33 -0500
 categories: art theory
 ---

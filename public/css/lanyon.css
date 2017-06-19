@@ -128,41 +128,41 @@ h4 {
 }
 @keyframes colorchange {
   0%   {color: #505050;}
-  17%  {color: #852525;}
-  33%  {color: #984500;}
-  50%  {color: #a77f03;}
-  67%  {color: #0c8900;}
-  83%  {color: #004b83;}
+  50%  {color: #852525;}
+  60%  {color: #984500;}
+  70%  {color: #a77f03;}
+  80%  {color: #0c8900;}
+  90%  {color: #004b83;}
   100% {color: #505050;}
 }
 
 @-webkit-keyframes colorchange {
   0%   {color: #505050;}
-  17%  {color: #852525;}
-  33%  {color: #984500;}
-  50%  {color: #a77f03;}
-  67%  {color: #0c8900;}
-  83%  {color: #004b83;}
+  50%  {color: #852525;}
+  60%  {color: #984500;}
+  70%  {color: #a77f03;}
+  80%  {color: #0c8900;}
+  90%  {color: #004b83;}
   100% {color: #505050;}
 }
 
 @-moz-keyframes colorchange {
   0%   {color: #505050;}
-  17%  {color: #852525;}
-  33%  {color: #984500;}
-  50%  {color: #a77f03;}
-  67%  {color: #0c8900;}
-  83%  {color: #004b83;}
+  50%  {color: #852525;}
+  60%  {color: #984500;}
+  70%  {color: #a77f03;}
+  80%  {color: #0c8900;}
+  90%  {color: #004b83;}
   100% {color: #505050;}
 }
 
 @-o-keyframes colorchange {
   0%   {color: #505050;}
-  17%  {color: #852525;}
-  33%  {color: #984500;}
-  50%  {color: #a77f03;}
-  67%  {color: #0c8900;}
-  83%  {color: #004b83;}
+  50%  {color: #852525;}
+  60%  {color: #984500;}
+  70%  {color: #a77f03;}
+  80%  {color: #0c8900;}
+  90%  {color: #004b83;}
   100% {color: #505050;}
 }
 
@@ -395,6 +395,12 @@ a.sidebar-nav-item:focus {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+}
+
+/* Meta data next to post title, in archive page */
+.archive-post-date {
+  color: #9a9a9a;
+  font-size: 1rem;
 }
 
 /* Related posts */

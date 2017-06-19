@@ -50,6 +50,15 @@
       $(".content").multilingual(["ko"]);
     });
     </script>
+    <script>
+      function getGiphy() {
+        var gif = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=meh", function(){ 
+          document.getElementById('meh').src = gif.responseJSON.data.image_url; 
+        }).done(function() { 
+          setTimeout(function(){ document.getElementById('meh').src = ''; }, Math.max(gif.responseJSON.data.image_frames * 50, 3000));
+        });
+      }
+    </script>
   </body>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

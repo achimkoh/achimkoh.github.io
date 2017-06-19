@@ -6,7 +6,7 @@ date: 2016-06-01
 tags: ["project", "data visualization"]
 ---
 
-Work in progress. Based on final project for [Data Visualization Methods, Spring 2016](http://manovich.net/index.php/teaching).
+Based on final project for [Data Visualization Methods, Spring 2016](http://manovich.net/index.php/teaching).
 
 # Introduction
 
@@ -81,6 +81,6 @@ Five contracts or more:
 
 Other than the obvious concentration of transactions within the capital area, one thing to note here is that regions other than the capital area tend to be disconnected with each other. Either the relationship is within the local region, or it is between the region and Seoul. This can be seen as a reflection of the highly centralized society, where Seoul acts as the single hub.
 
-Future research will include a more complete dataset with other auction categories as well. Furthermore, it will be an important element in a broader inquiry—a project I am working on with colleagues [E Roon Kang](http://www.eroonkang.com/) and [Wonyoung So](http://wonyoung.so/). The project will focus on the process and layers (government regulations, IT industry, online communities, etc) that led to the shaping of South Korean internet as it is today.
+Future research can include a more complete dataset with other auction categories as well. This data visualization project was included in [k-www](/k-www), a collaboration with [E Roon Kang](http://www.eroonkang.com/) and [Wonyoung So](http://wonyoung.so/), which focused on the process and layers (government regulations, IT industry, online communities, etc) that led to the shaping of South Korean internet as it is today.
 
 Tools used: R, plot.ly, DT, ggplot2

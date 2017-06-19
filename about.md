@@ -5,15 +5,21 @@ permalink: /about/
 featured: true
 ---
 
-My name is Achim ("ah-cheem"). I study digital media at the [Graduate Center, CUNY][gc]{:target="_blank"}. Currently I am working on two projects: one is a collaborative research on the history of South Korean internet and how this history relates to the shaping of the modern South Korean society, and the other is a [workshop series][cml]{:target="_blank"} aimed at providing interdisciplinary researchers with basic concepts of machine learning and encouraging a critical discussion around it. I'm also trying to learn to live code music.
+My name is Achim ("ah-cheem"). Right now I am working on a survey of recent developments in AI technology with regards to music creation, towards my master's thesis at the Graduate Center, CUNY; I am also compiling [machine learning-related resources for a critical and balanced understanding and usage][cml]{:target="_blank"}. I have worked on a [collaborative research on the history of the South Korean web][k-www]{:target="_blank"}, and started a new [project that explores the collective memories embodied in online communities][text-gen]{:target="_blank"}. 
 
-Before this I studied at an [artist-run school about technology and art][sfpc]{:target="_blank"}; worked as researcher / coordinator in a [makerspace program][makinglab]{:target="_blank"} that was part of the 4th Anyang Public Art Project; and made a [video series][recandplaynet]{:target="_blank"} of live music performances in urban settings.
+Occasionally I [translate texts and speeches between Korean, English and French][translation]{:target="_blank"}. 
 
-[CV]({{site.baseurl}}/assets/Koh-CV.pdf)
+Before, I studied at the [School for Poetic Computation][sfpc]{:target="_blank"}; worked as researcher / coordinator in a [makerspace program within the 4th Anyang Public Art Project][makinglab]{:target="_blank"}; and made a [video series of live music performances in urban settings][recandplaynet]{:target="_blank"}.
+
+[![Click for CV](/public/robot.gif){:title="Click for CV"}{:style="width:144px;"}](/assets/Koh-CV.pdf)
 
 [gc]: http://www.gc.cuny.edu/ 
-[cml]: http://newmedialab.cuny.edu
+[cml]: http://criticalml.net/
 [makinglab]: https://apap.or.kr/en/makinglab/
-[recandplaynet]: http://recandplay.net
-[sfpc]: http://sfpc.io
+[recandplaynet]: http://recandplay.net/
+[sfpc]: http://sfpc.io/
 [b1sd]: https://byung1shindle.bandcamp.com/
+[k-www]: http://k-www.kr/
+[tfcs]: https://tfcs.baruch.cuny.edu/
+[text-gen]: /text-generation
+[translation]: /projects

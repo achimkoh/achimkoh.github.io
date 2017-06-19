@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  instagram images by users
+title:  Data visualization of instagram images by users
 slug:   datavis-instagram
-date:   2016-05-01 
+date:   2016-05-13 
 tags: 	["project", "data visualization"]
 ---
 <style type="text/css">

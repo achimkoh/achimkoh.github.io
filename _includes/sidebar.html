@@ -2,6 +2,8 @@
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
+<!-- Load random image from giphy -->
+
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
@@ -10,26 +12,14 @@
   </div>
 
   <nav class="sidebar-nav">
-    {% comment %}
-      The code below dynamically generates a sidebar nav of pages with
-      `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
-
-    {% assign pages_list = site.pages | sort:"url" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-
-    <span class="sidebar-nav-item">meh</span>
+    <a class="sidebar-nav-item{% if page.url == '/about/' %} active{% endif %}" href="/about/">About</a>
+    <a class="sidebar-nav-item{% if page.url == '/projects/' %} active{% endif %}" href="/projects/">Projects</a>
+    <a class="sidebar-nav-item{% if page.url == '/otherthings/' %} active{% endif %}" href="/otherthings/">Other things</a>
+    <a class="sidebar-nav-item{% if page.url == '/archive/' %} active{% endif %}" href="/archive/">Archive</a>
+    <a class="sidebar-nav-item" href="#" onclick="getGiphy()">meh<img id="meh" src="" style="display: inline-block;"></a>
   </nav>
 
   <div class="sidebar-item">
-    <p>
-      <a href="https://twitter.com/achimkoh">{% include icon-twitter.svg %}</a><a href="https://github.com/achimkoh">{% include icon-github.svg %}</a>
-    </p>
+    <a href="https://twitter.com/achimkoh" alt="link to twitter">{% include icon-twitter.svg %}</a> <a href="https://github.com/achimkoh" alt="link to github">{% include icon-github.svg %}</a> <a href="https://www.are.na/achim-koh/" alt="link to are.na">{% include icon-arena.svg %}</a>
   </div>
 </div>
