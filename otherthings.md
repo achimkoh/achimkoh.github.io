@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  
+title: 
 permalink: /otherthings/
 ---
 
@@ -28,7 +28,7 @@ Choi, Taeyoon & Kang, E Roon. (2015) In Search of Personalized Time. Website and
 
 ### Presentations, Talks 발표
 
-["Machine Learning: A Primer."](http://dhweek.nycdh.org/event/machine-learning-a-primer/) Workshop at [NYCDH Week 2016](http://dhweek.nycdh.org/workshops/), New York City, NY, February 6-10, 2017. [slides](/assets/cunyitconference16_koh.pdf)
+"Machine Learning: A Primer." Workshop at [NYCDH Week 2016](http://dhweek.nycdh.org/workshops/), New York City, NY, February 6-10, 2017. [slides](/assets/cunyitconference16_koh.pdf)
 
 "Resources for a Critical Machine Learning." Presentation at [CUNY IT Conference 2016](http://www.centerdigitaled.com/events/CUNY-IT-Conference-2016.html), New York City, NY, December 1-2, 2016. [slides](/assets/feb8_nycdh_ml.pdf)
 
