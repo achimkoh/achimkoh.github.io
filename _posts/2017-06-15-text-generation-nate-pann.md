@@ -4,7 +4,9 @@ title:  Generating text based on scraped data
 tags: ["project", "machine learning", "text generation", "media studies"]
 ---
 
-#### latest update: jun 17
+[Nate Pann Generator, mockup prototype](https://natepan-157420.appspot.com/){:target="_blank"}
+
+#### previously:
 
 [Nate Pann](http://pann.nate.com) is a popular internet forum in South Korea. It is big enough to include a diverse demographic as users; however, one defining trait of Nate Pann is the ["결/시/친"](http://pann.nate.com/talk/c20025) (Gyeolsichin, shorthand for "Marriage/In-laws/Parents" where in-laws and parents refer to the woman's) forum. Gyeolsichin has an established status as a place where women in distress caused by diverse elements of the patriarchic Korean society come to rant. This characteristic makes it unique compared to other public online communities of comparable sizes, many of which display male-dominant voices. 
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ""
+title: Words and Speeches
 permalink: /otherthings/
 ---
 
