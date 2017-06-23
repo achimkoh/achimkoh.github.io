@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Other things
+title:  
 permalink: /otherthings/
 ---
 
@@ -28,13 +28,13 @@ Choi, Taeyoon & Kang, E Roon. (2015) In Search of Personalized Time. Website and
 
 ### Presentations, Talks 발표
 
-["Machine Learning: A Primer."](http://dhweek.nycdh.org/event/machine-learning-a-primer/) Workshop at [NYCDH Week 2016](http://dhweek.nycdh.org/workshops/), New York City, NY, February 6-10, 2017. <!-- slides -->
+["Machine Learning: A Primer."](http://dhweek.nycdh.org/event/machine-learning-a-primer/) Workshop at [NYCDH Week 2016](http://dhweek.nycdh.org/workshops/), New York City, NY, February 6-10, 2017. [slides](/assets/cunyitconference16_koh.pdf)
 
-"Resources for a Critical Machine Learning." Presentation at [CUNY IT Conference 2016](http://www.centerdigitaled.com/events/CUNY-IT-Conference-2016.html), New York City, NY, December 1-2, 2016. <!-- slides -->
+"Resources for a Critical Machine Learning." Presentation at [CUNY IT Conference 2016](http://www.centerdigitaled.com/events/CUNY-IT-Conference-2016.html), New York City, NY, December 1-2, 2016. [slides](/assets/feb8_nycdh_ml.pdf)
 
 "한국 인터넷 관광의 날". 발표. SeMA 비엔날레 미디어시티서울 2016: 네리리 키르르 하라라. 서울시립미술관, 서울. 2016년 10월 8일. <!-- slides/talk -->
 
-"기술문화 연구 방법론 세미나 1". 발표. 뉴마트, 서울. 2016년 10월 6일. <!-- slides -->
+"기술문화 연구 방법론 세미나 1". 발표. 뉴마트, 서울. 2016년 10월 6일. documentations [1](http://bit.ly/2emXctG) [2](http://bit.ly/2dVtkVC) [3](http://bit.ly/2emVys3)
 
 "가지 않은 길". 좌담회. SeMA 비엔날레 미디어시티서울 2016: 네리리 키르르 하라라. 서울시립미술관, 서울. 2016년 10월 1일. <!-- slides/talk -->
 
@@ -42,7 +42,7 @@ Choi, Taeyoon & Kang, E Roon. (2015) In Search of Personalized Time. Website and
 
 "The Wreckages in the South Korean Web." Presentation at Mapping Memory Conference, New York City, NY, March 11, 2016.
 
-"만들기 문화와 시민 참여의 가능성". 강연. 카이스트 문화기술 벤처 크리에이티브랩, 서울. 2014년 1월 14일.
+"만들기 문화와 시민 참여의 가능성". 강연. 카이스트 문화기술 벤처 크리에이티브랩, 서울. 2014년 1월 14일. <!-- slides -->
 
 "렉앤플레이와 함께하는 뮤직,비디오,블로그". 강연. 미디액트, 서울. 2011년 7월 26일 ~ 8월 12일. [관련연재](http://www.mediact.org/web/board/edu_news_view.php?code=Guide&mode=View&bbid=EDU_MOVIEMAKE&page=1&nums=19&sfl=&stx=&grp=)
 
