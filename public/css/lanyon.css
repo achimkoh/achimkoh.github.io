@@ -42,6 +42,7 @@
 html,
 body {
   overflow-x: hidden;
+  height: 100%;
 }
 
 html {
@@ -49,7 +50,6 @@ html {
 }
 
 body {
-  height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
