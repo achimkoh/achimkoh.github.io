@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  
+permalink: /otherthings/
 ---
 
 ### Publications 출판물
