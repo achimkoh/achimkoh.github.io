@@ -12,13 +12,16 @@ I also [sometimes produce text, and translate or polish other people's words](/o
 Before, I studied at the [School for Poetic Computation](http://sfpc.io/){:target="_blank"}; worked as researcher / coordinator in a [makerspace program within the 4th Anyang Public Art Project](https://4.apap.or.kr/en/makinglab/){:target="_blank"}; and made a [video series of live music performances in urban settings](http://recandplay.net/){:target="_blank"}.
 
 [![Click for CV](/public/robot.gif){:title="Click for CV"}{:style="width:144px;"}](/assets/Koh-CV.pdf)
-<script>$( function() {
-  	$('.wrap').css('background-color', 'rgba(255,255,255,0.9)');
-    var bg = $.get("https://api.giphy.com/v1/gifs/random?api_key=b5560de659674a64971bb4c80c17f382&tag=scalar&rating=G", function(){ 
-      $("body").css({'background-image':'url('+bg.responseJSON.data.image_url+')', 
-      	             'background-position':'center',
-      	             'background-repeat':'no-repeat',
-      	             'background-attachment':'local', 
-      	             'background-size':'100% 100%'}); 
-    });
-  });</script>
+
+{% raw %}
+<script>
+function randomFrom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+$( function() {
+  $('.wrap').css('background-color', 'rgba(255,255,255,0.9)');
+    var bg = $.get( "https://api.giphy.com/v1/gifs/random?api_key=b5560de659674a64971bb4c80c17f382&rating=G&tag="+randomFrom(['scalar','vector','tensor']), function(){ $("body").css({'background-image':'url('+bg.responseJSON.data.image_url+')', 'background-position':'center', 'background-repeat':'no-repeat', 'background-attachment':'fixed', 'background-size':'cover'}); 
+	});
+  });
+</script>
+{% endraw %}
